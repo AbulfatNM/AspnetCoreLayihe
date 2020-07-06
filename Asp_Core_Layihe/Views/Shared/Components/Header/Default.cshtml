@@ -1,0 +1,148 @@
+﻿@model Bio
+
+    <!--[if lt IE 8]>
+    <![endif]-->
+    <!-- Header Area Start -->
+    <header class="top">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <div class="header-top-left">
+                            <p>HAVE ANY QUESTION ?  +880 5698  598  6587</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                      
+                        <div class="header-top-right text-right">
+                            <ul>
+                                <li style="position:relative;color:white; z-index:1; ">
+
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        @User.Identity.Name
+                                         
+                                        <a style=" margin-left: 10px;" asp-controller="Account" asp-action="LogOut">logout</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Account" asp-action="LogIn">login</a>
+                                    }
+                                  </li>
+                                    <li><a asp-controller="Account"  asp-action="Register">signup</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-area two header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <div class="logo">
+                            <a href="index.html"><img src="~/img/logo/@Model.Logo" alt="eduhome" /></a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-6">
+                        <div class="content-wrapper text-right">
+                            <!-- Main Menu Start -->
+                            <div class="main-menu">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a asp-controller="Home" asp-action="Index">Home</a>
+                                        </li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li>
+                                            <a asp-controller="Courses" asp-action="Index">courses</a>
+                                        </li>
+                                        <li>
+                                            <a href="event.html">event</a>
+                                        </li>
+                                        <li class="hidden-sm">
+                                            <a asp-controller="Teacher" asp-action="Index">teacher</a>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="Blog" asp-action="Index">blog</a>
+                                        </li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="#">Buy Now</a>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!--Search Form Start-->
+                            @if (ViewContext.RouteData.Values["controller"].ToString() == ("Home"))
+                            {
+                                <div class="search-btn" style="display:none;">
+                                    <ul data-toggle="dropdown" class="header-search search-toggle">
+                                        <li class="search-menu">
+                                            <i class="fa fa-search"></i>
+                                        </li>
+                                    </ul>
+                                    <div class="search">
+                                        <div class="search-form">
+                                            <form id="search-form" action="#">
+                                                <input type="search" placeholder="Search here..." name="search" />
+                                                <button type="submit">
+                                                    <span><i class="fa fa-search"></i></span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            else if (ViewContext.RouteData.Values["controller"].ToString() == ("Courses"))
+                            {
+                                <div class="search-btn" style="display:none;">
+                                    <ul data-toggle="dropdown" class="header-search search-toggle">
+                                        <li class="search-menu">
+                                            <i class="fa fa-search"></i>
+                                        </li>
+                                    </ul>
+                                    <div class="search">
+                                        <div class="search-form">
+                                            <form id="search-form" action="#">
+                                                <input type="search" placeholder="Search here..." name="search" />
+                                                <button type="submit">
+                                                    <span><i class="fa fa-search"></i></span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            else if (ViewContext.RouteData.Values["controller"].ToString() == ("Teacher"))
+                            {
+                        <div class="search-btn">
+                            <ul data-toggle="dropdown" class="header-search search-toggle">
+                                <li class="search-menu">
+                                    <i class="fa fa-search"></i>
+                                </li>
+                            </ul>
+                            <div class="search">
+                                <div class="search-form">
+                                    <form id="search-form" action="#">
+                                        <input id="teacherSearch" type="search" placeholder="Search here..." name="search" autocomplete="off" />
+                                        <button type="submit">
+                                            <span><i class="fa fa-search"></i></span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                               
+                            }
+
+                            <!--End of Search Form-->
+                            <!-- Main Menu End -->
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="mobile-menu hidden-lg hidden-md hidden-sm"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->

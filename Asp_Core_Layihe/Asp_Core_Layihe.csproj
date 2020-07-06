@@ -11,6 +11,18 @@
     <Compile Remove="Migrations\20200705111703_CreateCourseTable.Designer.cs" />
     <Compile Remove="Migrations\20200705123812_UpdateCourseTable.cs" />
     <Compile Remove="Migrations\20200705123812_UpdateCourseTable.Designer.cs" />
+    <Compile Remove="Migrations\20200705211606_CreateSubscibeTable.cs" />
+    <Compile Remove="Migrations\20200705211606_CreateSubscibeTable.Designer.cs" />
+    <Compile Remove="Migrations\20200706093907_UpdateSubscribeTable.cs" />
+    <Compile Remove="Migrations\20200706093907_UpdateSubscribeTable.Designer.cs" />
+    <Compile Remove="Migrations\20200706122633_CreateBlogTable.cs" />
+    <Compile Remove="Migrations\20200706122633_CreateBlogTable.Designer.cs" />
+    <Compile Remove="Migrations\20200706123652_CreateDatabaseBlogTable.cs" />
+    <Compile Remove="Migrations\20200706123652_CreateDatabaseBlogTable.Designer.cs" />
+    <Compile Remove="Migrations\20200706130849_CreateBlogTable.cs" />
+    <Compile Remove="Migrations\20200706130849_CreateBlogTable.Designer.cs" />
+    <Compile Remove="Migrations\20200706183531_CreateCategoryBlogTable.cs" />
+    <Compile Remove="Migrations\20200706183531_CreateCategoryBlogTable.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

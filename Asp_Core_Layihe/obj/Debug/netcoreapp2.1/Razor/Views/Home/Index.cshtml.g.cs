@@ -18,8 +18,13 @@ using Asp_Core_Layihe.Models;
 
 #line default
 #line hidden
+#line 2 "C:\Users\Abulfat\Desktop\Asp.Net Core Layihe\Asp_Core_Layihe\Asp_Core_Layihe\Views\_ViewImports.cshtml"
+using Asp_Core_Layihe.ViewModels;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7e767651e85c2f55f06cb86c4d1f9ccb2aef820a", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d4a2e8effe1c8c379bd5499986062cd5dc4268fe", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e386e77bf56bcda4f393720459bacf4df878986d", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("action", new global::Microsoft.AspNetCore.Html.HtmlString("http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -511,7 +516,7 @@ using Asp_Core_Layihe.Models;
             WriteLiteral("class=\"newsletter-form mc_embed_signup\">\r\n                    ");
             EndContext();
             BeginContext(21656, 976, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "69acf1fc44ab4166a8505823c8f4c9ba", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b3a0d987830647a78d98dc4932499265", async() => {
                 BeginContext(21893, 732, true);
                 WriteLiteral(@"
                         <div id=""mc_embed_signup_scroll"" class=""mc-form"">

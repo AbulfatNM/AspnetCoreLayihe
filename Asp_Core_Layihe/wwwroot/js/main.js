@@ -1,4 +1,17 @@
 (function ($) {
+    $("#teacherSearch").keyup(function () {
+        let search = $(this).val();
+        $("#search-form li").remove()
+        if (search.length >= 2) {
+            $.ajax({
+                url: "/Teacher/TeacherSerach?search=" + search,
+                type: "Get",
+                success: function (res) {
+                    $("#search-form").append(res)
+                }
+            })
+        }
+    })
 "use strict";  
     
 /*------------------------------------

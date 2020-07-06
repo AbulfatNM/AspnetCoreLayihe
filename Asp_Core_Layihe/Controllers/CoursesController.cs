@@ -4,7 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Asp_Core_Layihe.DAL;
 using Asp_Core_Layihe.Models;
+using Asp_Core_Layihe.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Remotion.Linq.Clauses.ResultOperators;
 
 namespace Asp_Core_Layihe.Controllers
@@ -23,19 +25,14 @@ namespace Asp_Core_Layihe.Controllers
         }
         public IActionResult Detail(int id)
         {
-            List<CourseContent> courseContent = _db.CourseContents.ToList();
-            List<CourseFeature> courseFeatures = _db.CourseFeatures.ToList();
-            Course courseFind = _db.Courses.Find(id);
-            if (courseContent == null)
+            CategoryVM categoryVM = new CategoryVM()
             {
-                return NotFound();
-            }
-            if (courseFeatures==null)
-            {
-                return NotFound();
-            }
+                Course = _db.Courses.Include(c=>c.CourseContent).Include(c=>c.CourseFeature).FirstOrDefault(c => c.Id == id),
+                Courses = _db.Courses.ToList()
+            };
 
-            return View(courseFind);
+            return View(categoryVM);
         }
+
     }
 }

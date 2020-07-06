@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Threading.Tasks;
 using Asp_Core_Layihe.DAL;
 using Asp_Core_Layihe.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Asp_Core_Layihe.Controllers
 {
@@ -43,5 +45,12 @@ namespace Asp_Core_Layihe.Controllers
             }
             return View(teachers);
         }
+        public IActionResult TeacherSerach(string search)
+        {
+            var searchTeacher = _db.Teachers.Where(t => t.FullName.Contains(search)).OrderByDescending(p => p.Id).Take(5).ToList();
+
+            return PartialView("_SearchTeacherPartial", searchTeacher);
+        }
+    
     }
 }

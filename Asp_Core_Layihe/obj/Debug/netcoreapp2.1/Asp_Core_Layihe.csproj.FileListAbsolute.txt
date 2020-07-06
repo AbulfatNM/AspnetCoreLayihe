@@ -58,3 +58,10 @@ C:\Users\Abulfat\Desktop\Asp.Net Core Layihe\Asp_Core_Layihe\Asp_Core_Layihe\obj
 C:\Users\Abulfat\Desktop\Asp.Net Core Layihe\Asp_Core_Layihe\Asp_Core_Layihe\obj\Debug\netcoreapp2.1\Razor\Views\Teacher\Details.cshtml.g.cs
 C:\Users\Abulfat\Desktop\Asp.Net Core Layihe\Asp_Core_Layihe\Asp_Core_Layihe\obj\Debug\netcoreapp2.1\Razor\Views\Courses\Index.cshtml.g.cs
 C:\Users\Abulfat\Desktop\Asp.Net Core Layihe\Asp_Core_Layihe\Asp_Core_Layihe\obj\Debug\netcoreapp2.1\Razor\Views\Courses\Detail.cshtml.g.cs
+C:\Users\Abulfat\Desktop\Asp.Net Core Layihe\Asp_Core_Layihe\Asp_Core_Layihe\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\Header\Default.cshtml.g.cs
+C:\Users\Abulfat\Desktop\Asp.Net Core Layihe\Asp_Core_Layihe\Asp_Core_Layihe\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\Footer\Default.cshtml.g.cs
+C:\Users\Abulfat\Desktop\Asp.Net Core Layihe\Asp_Core_Layihe\Asp_Core_Layihe\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_SearchTeacherPartial.cshtml.g.cs
+C:\Users\Abulfat\Desktop\Asp.Net Core Layihe\Asp_Core_Layihe\Asp_Core_Layihe\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\Abulfat\Desktop\Asp.Net Core Layihe\Asp_Core_Layihe\Asp_Core_Layihe\obj\Debug\netcoreapp2.1\Razor\Views\Account\LogIN.cshtml.g.cs
+C:\Users\Abulfat\Desktop\Asp.Net Core Layihe\Asp_Core_Layihe\Asp_Core_Layihe\obj\Debug\netcoreapp2.1\Razor\Views\Blog\Index.cshtml.g.cs
+C:\Users\Abulfat\Desktop\Asp.Net Core Layihe\Asp_Core_Layihe\Asp_Core_Layihe\obj\Debug\netcoreapp2.1\Razor\Views\Blog\Detail.cshtml.g.cs

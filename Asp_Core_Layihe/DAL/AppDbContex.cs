@@ -1,4 +1,5 @@
 ﻿using Asp_Core_Layihe.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Asp_Core_Layihe.DAL
 {
-    public class AppDbContex:DbContext
+    public class AppDbContex:IdentityDbContext<AppUser>
     {
         public AppDbContex(DbContextOptions<AppDbContex> options) : base(options)
         {
@@ -19,6 +20,10 @@ namespace Asp_Core_Layihe.DAL
         public DbSet<Course> Courses { get; set; }
         public DbSet<CourseFeature> CourseFeatures { get; set; }
         public DbSet <CourseContent> CourseContents { get; set; }
-        
+        public DbSet<Bio>Bios  { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
+
+
     }
 }

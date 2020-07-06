@@ -1,0 +1,72 @@
+﻿@model LoginVM
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Eduhome - Educational HTML Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="~/apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/animate.css">
+    <link rel="stylesheet" href="~/css/meanmenu.css">
+    <link rel="stylesheet" href="~/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/et-line-icon.css">
+    <link rel="stylesheet" href="~/css/reset.css">
+    <link rel="stylesheet" href="~/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/responsive.css">
+    <script src="~/js/vendor/modernizr-2.8.3.min.js"></script>
+    <title>LogIN</title>
+</head>
+<body>
+    <div class="login-area pt-150 pb-150">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <div class="login">
+                        <div class="login-form-container">
+                            <div class="login-text">
+                                <h2>login</h2>
+                                <span>Please login using account detail bellow.</span>
+                            </div>
+                            <div class="login-form">
+                                <div asp-validation-summary="ModelOnly"></div>
+                                <form action="Login" method="post">
+                                    <input asp-for="Email"   placeholder="Email">
+                                    <span asp-validation-for="Email"></span>
+                                    <input asp-for="Password"  placeholder="Password">
+                                    <span asp-validation-for="Password"></span>
+                                    <div class="button-box">
+                                        @*<div class="login-toggle-btn">
+                                            <input type="checkbox" id="remember">
+                                            <label for="remember">Remember me</label>
+                                            <a href="#">Forgot Password?</a>
+                                        </div>*@
+                                        <button type="submit" class="default-btn">Login</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>
