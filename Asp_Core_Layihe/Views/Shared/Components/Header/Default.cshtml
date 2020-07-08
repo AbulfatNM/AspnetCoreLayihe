@@ -58,7 +58,7 @@
                                             <a asp-controller="Courses" asp-action="Index">courses</a>
                                         </li>
                                         <li>
-                                            <a href="event.html">event</a>
+                                            <a asp-controller="Event" asp-action="Index">event</a>
                                         </li>
                                         <li class="hidden-sm">
                                             <a asp-controller="Teacher" asp-action="Index">teacher</a>
@@ -66,8 +66,7 @@
                                         <li>
                                             <a asp-controller="Blog" asp-action="Index">blog</a>
                                         </li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="#">Buy Now</a>
+                                        <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -114,29 +113,49 @@
                             }
                             else if (ViewContext.RouteData.Values["controller"].ToString() == ("Teacher"))
                             {
-                        <div class="search-btn">
-                            <ul data-toggle="dropdown" class="header-search search-toggle">
-                                <li class="search-menu">
-                                    <i class="fa fa-search"></i>
-                                </li>
-                            </ul>
-                            <div class="search">
-                                <div class="search-form">
-                                    <form id="search-form" action="#">
-                                        <input id="teacherSearch" type="search" placeholder="Search here..." name="search" autocomplete="off" />
-                                        <button type="submit">
-                                            <span><i class="fa fa-search"></i></span>
-                                        </button>
-                                    </form>
+                                <div class="search-btn">
+                                    <ul data-toggle="dropdown" class="header-search search-toggle">
+                                        <li class="search-menu">
+                                            <i class="fa fa-search"></i>
+                                        </li>
+                                    </ul>
+                                    <div class="search">
+                                        <div class="search-form">
+                                            <form id="search-form" action="#">
+                                                <input id="teacherSearch" type="search" placeholder="Search here..." name="search" autocomplete="off" />
+                                                <button type="submit">
+                                                    <span><i class="fa fa-search"></i></span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                               
+
+                            }
+                            else if (ViewContext.RouteData.Values["controller"].ToString() == ("Blog"))
+                            {
+                                <div class="search-btn">
+                                    <ul data-toggle="dropdown" class="header-search search-toggle">
+                                        <li class="search-menu">
+                                            <i class="fa fa-search"></i>
+                                        </li>
+                                    </ul>
+                                    <div class="search">
+                                        <div  id="Blog-form">
+                                            <form id="search-form" action="#">
+                                                <input id="BlogSearch" type="search" placeholder="Search here..." name="search" autocomplete="off" />
+                                                <button type="submit">
+                                                    <span><i class="fa fa-search"></i></span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
                             }
 
-                            <!--End of Search Form-->
-                            <!-- Main Menu End -->
-                        </div>
+                                <!--End of Search Form-->
+                                <!-- Main Menu End -->
+                            </div>
                     </div>
                     <div class="col-xs-12">
                         <div class="mobile-menu hidden-lg hidden-md hidden-sm"></div>

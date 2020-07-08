@@ -1,0 +1,19 @@
+﻿@model string
+
+
+@if (Model == Email.IsValidEmail.Empty.ToString())
+{
+    @: You must enter an email !
+}
+else if (Model == Email.IsValidEmail.NotEmail.ToString())
+{
+    @:Write the correct email !
+}
+else if (Model == Email.IsValidEmail.Already.ToString())
+{
+    @:Email has already been saved !
+}
+else
+{
+    @:Successfullysubscribe !
+}

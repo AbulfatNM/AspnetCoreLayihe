@@ -1,0 +1,24 @@
+﻿@model SearchVM
+@if (Model.Teacher != null)
+{
+    @foreach (Teacher teacher in Model.Teacher)
+    {
+
+        <li style="list-style:none; text-align:center">
+            <a href="/Teacher/Details/@teacher.Id" style="color:red; ">@teacher.FullName</a>
+        </li>
+    }
+}
+@if (Model.Blogs !=null)
+{
+    @foreach (Blog blog in Model.Blogs)
+    {
+        <li style="list-style:none; text-align:center">
+            <a href="/teacher/details/@blog.Id" style="color:red; ">@blog.Title</a>
+        </li>
+    }
+}
+
+
+
+@* <a href="/Teacher/Details/@teacher.Id"><img style="width:100px; height:100px" src="~/img/teacher/@teacher.Image" /></a>*@

@@ -1,4 +1,25 @@
 (function ($) {
+    //Subscribe Emil start
+    $(document).on('click', '#Subscribe_button', function () {
+        let email = $('#Subscribe-email').val().trim();
+        if (email) {
+            $.ajax({
+                url: "/Subscribe/SubscribeEmail?email=" + email,
+                type: "Post",
+                success: function (res) {
+                    swal(`${res}`);
+                },
+                error: function () {
+                    swal("An error occurred !", {
+                        icon: "error",
+                    });
+                }
+            })
+
+        }
+    })
+  
+    //Teacher serach strart
     $("#teacherSearch").keyup(function () {
         let search = $(this).val();
         $("#search-form li").remove()
@@ -12,6 +33,24 @@
             })
         }
     })
+        //Teacher serach end
+    //Blog search start
+    $("#BlogSearch").keyup(function () {
+        let searchBlog = $(this).val();
+        console.log(searchBlog)
+        $("#Blog-form li").remove()
+        if (searchBlog.length >= 2) {
+            $.ajax({
+                url: "/Blog/BlogSearch?search=" + searchBlog,
+                type: "Get",
+                success: function (res) {
+                    $("#Blog-form").append(res)
+                }
+            })
+        }
+    })
+ 
+    //Blog search end
 "use strict";  
     
 /*------------------------------------

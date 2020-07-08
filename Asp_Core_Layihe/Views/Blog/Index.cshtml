@@ -29,7 +29,7 @@
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="single-blog mb-60">
                         <div class="blog-img">
-                            <a href="#"><img src="img/blog/@blog.Image" alt="blog"></a>
+                            <a asp-action="Detail" asp-route-id="@blog.Id"><img src="~/img/blog/@blog.Image" alt="blog"></a>
                             <div class="blog-hover">
                                 <i class="fa fa-link"></i>
                             </div>
@@ -40,7 +40,7 @@
                             </div>
                             <div class="blog-bottom">
                                 <h2><a href="blog-details.html">I must explain to you how all this a mistaken idea </a></h2>
-                                <a href="blog-details.html">read more</a>
+                                <a asp-action="Detail" asp-route-id="@blog.Id">read more</a>
                             </div>
                         </div>
                     </div>
@@ -49,22 +49,24 @@
 
 
         </div>
-        <div class="row mainlist">
-            <div class="col-xs-12">
-                <div class="pagination"style="display:flex; justify-content:center;">
-                    <ul >
-                        @*@for (int i = 1; i <= ViewBag.PageCount; i++)
+        <div class="row">
+            <div class="col">
+                <nav aria-label="...">
+                    <ul class="pagination pagination-lg" style="display:flex; justify-content:center">
+                        @for (int i = 1; i <= ViewBag.PageCount; i++)
                         {
                             if (ViewBag.Page == null)
                             {
                                 if (i == 1)
                                 {
-                                    <li class="disabled"><a href="/blog/index?page=@i">@i</a></li>
+                                    <li class="page-item disabled"><a class="page-link" href="/blog/index?page=@i">@i</a></li>
+
 
                                 }
                                 else
                                 {
-                                    <li><a href="/blog/index?page=@i">@i</a></li>
+                                    <li class="page-item active"><a class="page-link" href="/blog/index?page=@i">@i</a></li>
+
                                 }
                             }
                             else
@@ -72,18 +74,26 @@
 
                                 if (ViewBag.Page == i)
                                 {
-                                        <li class="disabled"><a href="/blog/index?page=@i">@i</a></li>
+
+                                    <li class="page-item disabled"><a class="page-link" href="/blog/index?page=@i">@i</a></li>
+
 
                                 }
                                 else
                                 {
-                                        <li><a href="/blog/index?page=@i">@i</a></li>
+                                    <li class="page-item"><a class="page-link" href="/blog/index?page=@i">@i</a></li>
+
                                 }
                             }
 
-                        }*@
-                        </ul>
-                </div>
+                        }
+                    </ul>
+                </nav>
+                @*<div class="pagination" style="display:flex; justify-content:center;">
+                    <ul>
+                     
+                    </ul>
+                </div>*@
             </div>
         </div>
     </div>

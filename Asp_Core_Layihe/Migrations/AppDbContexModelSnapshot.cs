@@ -142,6 +142,27 @@ namespace Asp_Core_Layihe.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("Asp_Core_Layihe.Models.Contact", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasMaxLength(60);
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasMaxLength(40);
+
+                    b.Property<string>("Image");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Contacts");
+                });
+
             modelBuilder.Entity("Asp_Core_Layihe.Models.Course", b =>
                 {
                     b.Property<int>("Id")
@@ -230,6 +251,55 @@ namespace Asp_Core_Layihe.Migrations
                     b.ToTable("CourseFeatures");
                 });
 
+            modelBuilder.Entity("Asp_Core_Layihe.Models.Event", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Date");
+
+                    b.Property<string>("Description")
+                        .IsRequired();
+
+                    b.Property<DateTime>("EndTime");
+
+                    b.Property<string>("Image")
+                        .IsRequired();
+
+                    b.Property<DateTime>("StartTime");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(150);
+
+                    b.Property<string>("Venue")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Events");
+                });
+
+            modelBuilder.Entity("Asp_Core_Layihe.Models.EventToSpeaker", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("EventId");
+
+                    b.Property<int>("SpeakerId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EventId");
+
+                    b.HasIndex("SpeakerId");
+
+                    b.ToTable("EventToSpeakers");
+                });
+
             modelBuilder.Entity("Asp_Core_Layihe.Models.SkillsTeacher", b =>
                 {
                     b.Property<int>("Id")
@@ -251,6 +321,41 @@ namespace Asp_Core_Layihe.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("SkillsTeachers");
+                });
+
+            modelBuilder.Entity("Asp_Core_Layihe.Models.Speaker", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasMaxLength(60);
+
+                    b.Property<string>("Image")
+                        .IsRequired();
+
+                    b.Property<string>("Position")
+                        .IsRequired()
+                        .HasMaxLength(65);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Speakers");
+                });
+
+            modelBuilder.Entity("Asp_Core_Layihe.Models.SubscribeMail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SubscribeMails");
                 });
 
             modelBuilder.Entity("Asp_Core_Layihe.Models.Teacher", b =>
@@ -458,6 +563,19 @@ namespace Asp_Core_Layihe.Migrations
                     b.HasOne("Asp_Core_Layihe.Models.CourseFeature", "CourseFeature")
                         .WithOne("Course")
                         .HasForeignKey("Asp_Core_Layihe.Models.Course", "CourseFeatureId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Asp_Core_Layihe.Models.EventToSpeaker", b =>
+                {
+                    b.HasOne("Asp_Core_Layihe.Models.Event", "Event")
+                        .WithMany("EventToSpeakers")
+                        .HasForeignKey("EventId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Asp_Core_Layihe.Models.Speaker", "Speaker")
+                        .WithMany("EventToSpeakers")
+                        .HasForeignKey("SpeakerId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

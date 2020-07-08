@@ -23,6 +23,11 @@ namespace Asp_Core_Layihe.DAL
         public DbSet<Bio>Bios  { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet <SubscribeMail>SubscribeMails { get; set; }
+        public DbSet<EventToSpeaker> EventToSpeakers { get; set; }
+        public DbSet<Speaker> Speakers { get; set; }
+        public DbSet<Event> Events { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
 
 
     }

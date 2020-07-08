@@ -5,6 +5,7 @@ using System.Net.Mail;
 using System.Threading.Tasks;
 using Asp_Core_Layihe.DAL;
 using Asp_Core_Layihe.Models;
+using Asp_Core_Layihe.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -47,9 +48,14 @@ namespace Asp_Core_Layihe.Controllers
         }
         public IActionResult TeacherSerach(string search)
         {
-            var searchTeacher = _db.Teachers.Where(t => t.FullName.Contains(search)).OrderByDescending(p => p.Id).Take(5).ToList();
+            List<Teacher> teachers = _db.Teachers.Where(t => t.FullName.Contains(search)).OrderByDescending(p => p.Id).Take(5).ToList();
 
-            return PartialView("_SearchTeacherPartial", searchTeacher);
+            SearchVM searchVM = new SearchVM()
+            {
+                Teacher = teachers
+            };
+
+            return PartialView("_SearchPartial", searchVM);
         }
     
     }
