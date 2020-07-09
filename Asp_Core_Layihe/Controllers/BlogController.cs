@@ -64,8 +64,8 @@ namespace Asp_Core_Layihe.Controllers
             {
                 Blog=blog,
                 Blogs=blogs,
-                Categories=category,
-                AppUsers=appUser
+                Categories = category,
+                AppUsers =appUser
 
             };
             return View(blogVM);

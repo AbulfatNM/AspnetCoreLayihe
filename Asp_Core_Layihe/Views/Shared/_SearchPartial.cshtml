@@ -9,12 +9,21 @@
         </li>
     }
 }
-@if (Model.Blogs !=null)
+@if (Model.Blogs != null)
 {
     @foreach (Blog blog in Model.Blogs)
     {
         <li style="list-style:none; text-align:center">
             <a href="/teacher/details/@blog.Id" style="color:red; ">@blog.Title</a>
+        </li>
+    }
+}
+@if (Model.Events != null)
+{
+    @foreach (Event events in Model.Events)
+    {
+        <li style="list-style:none; text-align:center">
+            <a href="/teacher/details/@events.Id" style="color:red; ">@events.Title</a>
         </li>
     }
 }

@@ -4,14 +4,16 @@ using Asp_Core_Layihe.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Asp_Core_Layihe.Migrations
 {
     [DbContext(typeof(AppDbContex))]
-    partial class AppDbContexModelSnapshot : ModelSnapshot
+    [Migration("20200709130956_CreateAboutTable")]
+    partial class CreateAboutTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -381,25 +383,6 @@ namespace Asp_Core_Layihe.Migrations
                     b.HasIndex("SpeakerId");
 
                     b.ToTable("EventToSpeakers");
-                });
-
-            modelBuilder.Entity("Asp_Core_Layihe.Models.HomeSlider", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Description")
-                        .HasMaxLength(300);
-
-                    b.Property<string>("Image");
-
-                    b.Property<string>("Title")
-                        .HasMaxLength(150);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("HomeSliders");
                 });
 
             modelBuilder.Entity("Asp_Core_Layihe.Models.SkillsTeacher", b =>

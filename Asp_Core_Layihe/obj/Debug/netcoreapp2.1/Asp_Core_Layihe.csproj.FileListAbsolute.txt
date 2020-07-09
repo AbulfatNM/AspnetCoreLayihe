@@ -69,3 +69,4 @@ C:\Users\Abulfat\Desktop\Asp.Net Core Layihe\Asp_Core_Layihe\Asp_Core_Layihe\obj
 C:\Users\Abulfat\Desktop\Asp.Net Core Layihe\Asp_Core_Layihe\Asp_Core_Layihe\obj\Debug\netcoreapp2.1\Razor\Views\Event\Index.cshtml.g.cs
 C:\Users\Abulfat\Desktop\Asp.Net Core Layihe\Asp_Core_Layihe\Asp_Core_Layihe\obj\Debug\netcoreapp2.1\Razor\Views\Event\Detail.cshtml.g.cs
 C:\Users\Abulfat\Desktop\Asp.Net Core Layihe\Asp_Core_Layihe\Asp_Core_Layihe\obj\Debug\netcoreapp2.1\Razor\Views\Contact\Index.cshtml.g.cs
+C:\Users\Abulfat\Desktop\Asp.Net Core Layihe\Asp_Core_Layihe\Asp_Core_Layihe\obj\Debug\netcoreapp2.1\Razor\Views\About\Index.cshtml.g.cs

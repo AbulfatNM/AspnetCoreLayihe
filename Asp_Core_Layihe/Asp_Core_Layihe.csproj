@@ -25,6 +25,14 @@
     <Compile Remove="Migrations\20200706183531_CreateCategoryBlogTable.Designer.cs" />
     <Compile Remove="Migrations\20200708015010_CreateContactTable.cs" />
     <Compile Remove="Migrations\20200708015010_CreateContactTable.Designer.cs" />
+    <Compile Remove="Migrations\20200708205933_CreateAboutTablee.cs" />
+    <Compile Remove="Migrations\20200708205933_CreateAboutTablee.Designer.cs" />
+    <Compile Remove="Migrations\20200709120908_CreateAboutTable.cs" />
+    <Compile Remove="Migrations\20200709120908_CreateAboutTable.Designer.cs" />
+    <Compile Remove="Migrations\20200709123542_CreateAboutTable.cs" />
+    <Compile Remove="Migrations\20200709123542_CreateAboutTable.Designer.cs" />
+    <Compile Remove="Migrations\20200709154142_CreateHomeSliderTable.cs" />
+    <Compile Remove="Migrations\20200709154142_CreateHomeSliderTable.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

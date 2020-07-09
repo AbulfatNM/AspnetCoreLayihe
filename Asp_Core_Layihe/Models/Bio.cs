@@ -13,6 +13,9 @@ namespace Asp_Core_Layihe.Models
         public int Id { get; set; }
         [Required]
         public string Logo { get; set; }
+        public string SmalLogoWhite { get; set; }
+        public string SmalLogoBlack { get; set; }
+
         [MinLength(30),MaxLength(250)]
         public string Description { get; set; }
         public string Facebook { get; set; }

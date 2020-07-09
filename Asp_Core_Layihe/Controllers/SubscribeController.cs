@@ -50,7 +50,9 @@ namespace Asp_Core_Layihe.Controllers
                 SubscribeMail mail = new SubscribeMail()
                 {
                     Email = email
+
                 };
+
                 _db.SubscribeMails.Add(mail);
                 await _db.SaveChangesAsync();
                 return PartialView("_SubscribePartial", Email.IsValidEmail.Success.ToString());

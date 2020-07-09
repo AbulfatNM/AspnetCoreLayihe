@@ -54,9 +54,18 @@ namespace Asp_Core_Layihe.Controllers
                 };
                 return View(eventVM);
             }
-         
+        }
 
-           
+        public IActionResult EventSearch(string search)
+        {
+            List<Event> events = _db.Events.Where(b => b.Title.Contains(search)).OrderByDescending(b => b.Id).Take(2).ToList();
+            SearchVM searchVM = new SearchVM()
+            {
+                Events = events
+            };
+            return PartialView("_SearchPartial", searchVM);
         }
     }
+  
+
 }

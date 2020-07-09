@@ -28,6 +28,13 @@ namespace Asp_Core_Layihe.DAL
         public DbSet<Speaker> Speakers { get; set; }
         public DbSet<Event> Events { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<AboutNotice> AboutNotices { get; set; }
+        public DbSet<AboutSlider> AboutSliders { get; set; }
+        public DbSet<AboutVideo> AboutVideos { get; set; }
+        public DbSet<AboutWelcome> AboutWelcomes { get; set; }
+        public DbSet<HomeSlider> HomeSliders { get; set; }
+
+
 
 
     }

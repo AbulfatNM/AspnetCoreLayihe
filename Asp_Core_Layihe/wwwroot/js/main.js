@@ -37,7 +37,6 @@
     //Blog search start
     $("#BlogSearch").keyup(function () {
         let searchBlog = $(this).val();
-        console.log(searchBlog)
         $("#Blog-form li").remove()
         if (searchBlog.length >= 2) {
             $.ajax({
@@ -51,6 +50,22 @@
     })
  
     //Blog search end
+    //Event search start
+    $("#EventSearch").keyup(function () {
+        let searchBlog = $(this).val();
+        $("#Event-form li").remove()
+        if (searchBlog.length >= 2) {
+            $.ajax({
+                url: "/Event/EventSearch?search=" + searchBlog,
+                type: "Get",
+                success: function (res) {
+                    $("#Event-form").append(res)
+                }
+            })
+        }
+    })
+
+    //Event search end
 "use strict";  
     
 /*------------------------------------

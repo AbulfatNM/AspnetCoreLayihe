@@ -103,6 +103,7 @@
                                     </a>
                                 </div>
                                 <div class="single-post-content">
+                                 
                                     <h4><a asp-action="Detail">@blogPost.Title</a></h4>
                                     <p>by @Model.AppUsers.FirstOrDefault(u=>u.Id==blogPost.AppUserId).UserName.ToLower() /  @blogPost.Date.ToString("MM / dd / yyyy").ToLower()</p>
                                 </div>
