@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Delete";
+}
+
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-6">
+                <h4>Image</h4>
+                <img style="width:250px; height:150px" src="~/img/testimonial/@Model.Image" />
+            </div>
+            <div class="col-lg-6">
+                <h4>Background Image</h4>
+                <img style="width:250px; height:150px" src="~/img/testimonial/@Model.BackgroundImage" />
+            </div>
+            <div class="mt-5">
+                <h4>Name</h4>
+                <p>@Model.Name </p>
+                <h4>Position</h4>
+                <p>@Model.Position</p>
+                <h4>Description</h4>
+                <p>@Model.Description  </p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <a class="btn btn-dark text-white" asp-controller="AboutSlider" asp-action="Index">Go Back</a>
+            <form method="post" class="forms-sample ml-3">
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+        </div>
+
+    </div>
+

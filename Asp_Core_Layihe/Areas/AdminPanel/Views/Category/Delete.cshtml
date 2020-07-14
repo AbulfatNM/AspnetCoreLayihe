@@ -1,0 +1,22 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Delete";
+}
+
+    <div class="container">
+        <div class="row ">
+            <h4>Category Name</h4>
+            
+
+            <div class="col-12 mt-4">
+                <p>@Model.CategoryName</p>
+                <form method="post" class="forms-sample mt-3 ">
+                    <button type="submit" class="btn btn-danger  ">Delete</button>
+                </form>
+            </div>
+        </div>
+            <div class="row mt-2">
+                <a class="btn btn-dark text-white" asp-controller="Category" asp-action="Index">Go Back</a>
+            </div>
+        </div>
+

@@ -1,0 +1,39 @@
+﻿@model CourseContent
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Create Content</h4>
+                <form method="post" asp-action="Create" class="forms-sample mt-5">
+                    <div class="form-group">
+                        <h5>About Course </h5>
+                        <input asp-for="AboutCourse" class="form-control" id="exampleInputUsername1" placeholder="Write About">
+                        @*<textarea id="editor" asp-for="CategoryName" placeholder="Write the category name"></textarea>*@
+                        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                        <span class="text-danger" asp-validation-for="AboutCourse"></span>
+                        <h5 class="mt-3">HowToApply Course </h5>
+                        <input asp-for="HowToApply" class="form-control" id="exampleInputUsername1" placeholder="Write Howtoapply">
+                        <span class="text-danger" asp-validation-for="HowToApply"></span>
+                        <h5 class="mt-3">Certification Course </h5>
+                        <input asp-for="Certification" class="form-control" id="exampleInputUsername1" placeholder="Write Certification">
+                        <span class="text-danger" asp-validation-for="Certification"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                </form>
+                <div class="mt-3">
+                    <a class="btn btn-dark text-white" asp-controller="Course" asp-action="CourseContent">Go Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+}
+

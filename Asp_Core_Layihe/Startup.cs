@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,6 +27,7 @@ namespace Asp_Core_Layihe
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            //services.AddMemoryCache();
             services.AddDbContext<AppDbContex>(options =>
             options.UseSqlServer(_config["ConnectionStrings:DefaultConnection"])
             );
@@ -43,6 +45,14 @@ namespace Asp_Core_Layihe
                 identityoptions.Lockout.AllowedForNewUsers = true;
             
             }).AddEntityFrameworkStores<AppDbContex>().AddDefaultTokenProviders();
+
+            //services.Configure<CookieTempDataProviderOptions>(options => {
+            //    options.Cookie.IsEssential = true;
+            //});
+            //services.Configure<CookieTempDataProviderOptions>(options =>
+            //{
+            //    options.Cookie.Name = "MyTempDataCookie";
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,7 +67,11 @@ namespace Asp_Core_Layihe
 
             app.UseMvc(routes =>
             {
-                   routes.MapRoute(
+                routes.MapRoute(
+            name: "areas",
+            template: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}"
+              );
+                routes.MapRoute(
                     "default",
                     "{controller=Home}/{action=Index}/{Id?}"
                     );

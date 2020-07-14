@@ -1,0 +1,38 @@
+﻿@model  CourseFeature
+@{
+    ViewData["Title"] = "DetailCourseFature";
+}
+
+
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th scope="col">STARTS</th>
+                <th scope="col">DURATION</th>
+                <th scope="col">SKILL LEVEL</th>
+                <th scope="col">Class Duration</th>
+                <th scope="col">LANGUAGE</th>
+                <th scope="col">STUDENTS</th>
+                <th scope="col">ASSESMENTS</th>
+                <th scope="col">Course Fee</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>@Model.Starts</td>
+                    <td>@Model.Duration</td>
+                    <td>@Model.Skill_Level</td>
+                    <td>@Model.Class_Duration</td>
+                    <td>@Model.Language</td>
+                    <td>@Model.Students</td>
+                    <td>@Model.Assesments</td>
+                    <td>@Model.Course_Fee</td>
+                </tr>
+        </tbody>
+    </table>
+<div class="row mt-4">
+    <a class="btn btn-dark text-white" asp-controller="Course" asp-action="CourseFeature">Go Back</a>
+</div>
+
+
+

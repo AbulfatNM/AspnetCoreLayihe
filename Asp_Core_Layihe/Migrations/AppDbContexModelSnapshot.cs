@@ -218,7 +218,9 @@ namespace Asp_Core_Layihe.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("CategoryName");
+                    b.Property<string>("CategoryName")
+                        .IsRequired()
+                        .HasMaxLength(50);
 
                     b.HasKey("Id");
 
@@ -285,6 +287,7 @@ namespace Asp_Core_Layihe.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("AboutCourse")
+                        .IsRequired()
                         .HasMaxLength(400);
 
                     b.Property<string>("Certification")
@@ -390,11 +393,13 @@ namespace Asp_Core_Layihe.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(300);
 
                     b.Property<string>("Image");
 
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasMaxLength(150);
 
                     b.HasKey("Id");

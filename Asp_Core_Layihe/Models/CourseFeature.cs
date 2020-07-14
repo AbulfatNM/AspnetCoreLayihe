@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Serialization;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -9,9 +10,10 @@ namespace Asp_Core_Layihe.Models
     public class CourseFeature
     {
         public int Id { get; set; }
-        [Required, StringLength(65)]
+        [Required, StringLength(65),DataType(DataType.Date)]
+        
         public string Starts { get; set; }
-        [Required, StringLength(50)]
+        [Required, StringLength(50),DataType(DataType.Duration)]
         public string Duration { get; set; }
         [Required, StringLength(50)]
         public string Class_Duration { get; set; }

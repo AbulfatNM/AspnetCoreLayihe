@@ -1,0 +1,86 @@
+﻿@model Bio
+@{
+    ViewData["Title"] = "Delete";
+}
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                Logo
+                            </th>
+                            <th>
+                                SmalBalckLogo
+                            </th>
+                            <th>
+                                SmalWhitekLogo
+                            </th>
+                            <th>
+                                FaceBook
+                            </th>
+                            <th>
+                                Twitter
+                            </th>
+                            <th>
+                                Linkedin
+                            </th>
+                            <th>
+                                Description
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                <img style="width:100px; height:100px" src="~/img/logo/@Model.Logo" />
+                            </td>
+                            <td>
+                                <img style="width:100px; height:100px" src="~/img/icon/@Model.SmalLogoBlack" />
+                            </td>
+                            <td>
+                                <img style="width:100px; height:100px" src="~/img/icon/@Model.SmalLogoWhite" />
+                            </td>
+                            <td>
+                                <p>@Model.Facebook</p>
+                            </td>
+                            <td>
+                                <p>@Model.Tiwitter</p>
+
+                            </td>
+                            <td>
+                                <p>@Model.Linkedin</p>
+
+                            </td>
+                            <td>
+                                <p>@Model.Description</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+        <div class="row mt-4">
+            <a class="btn btn-dark text-white" asp-controller="Bio" asp-action="Index">Go Back</a>
+
+            <form method="post" class="forms-sample ml-3">
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+

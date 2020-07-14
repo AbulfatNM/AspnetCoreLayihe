@@ -1,0 +1,60 @@
+﻿@model IEnumerable<AboutSlider>
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="row">
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">About Slider</h4>
+                <div class="d-flex justify-content-end">
+                    <a class="btn btn-success" asp-controller="AboutSlider" asp-action="Create">Create Slider</a>
+
+                    @*@if (ViewBag.SliderCount < 5)
+                    {
+                    }*@
+
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Image
+                                </th>
+                                <th>
+                                    Setting
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (AboutSlider aboutSlider in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <img style="width:150px; height:150px" src="~/img/testimonial/@aboutSlider.Image" />
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-primary" asp-action="Detail" asp-route-id="@aboutSlider.Id">
+                                            <i class="mdi mdi-information-variant"></i>
+                                        </a>
+                                        <a class="btn btn-warning" asp-action="Edit" asp-route-id="@aboutSlider.Id">
+                                            <i class="mdi mdi-border-color"></i>
+                                        </a>
+                                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@aboutSlider.Id">
+                                            <i class="mdi mdi-delete-variant"></i>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

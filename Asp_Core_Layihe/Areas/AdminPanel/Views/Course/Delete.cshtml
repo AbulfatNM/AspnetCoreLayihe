@@ -1,0 +1,32 @@
+﻿@model CourseContent
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+    <div class="container">
+        @*<div class="row d-flex justify-content-center">
+            <img style="width:450px; height:250px" src="~/img/slider/@Model.Image" />
+
+        </div>*@
+  
+        <div class="text-center mt-3">
+
+            <h3>About Course</h3>
+            <p>@Model.AboutCourse</p>
+            <h3 style="line-height:2;"> HowToApply Course</h3>
+            <p>@Model.HowToApply</p>
+            <h3>Certification Course</h3>
+            <p>@Model.Certification</p>
+           
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 ">
+                <form method="post" class="forms-sample mt-3 ">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+            <a class="btn btn-dark text-white mt-3 " asp-controller="Course" asp-action="CourseContent">Go Back</a>
+        </div>
+    </div>
+

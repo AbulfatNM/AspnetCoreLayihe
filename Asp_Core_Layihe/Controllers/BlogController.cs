@@ -50,8 +50,6 @@ namespace Asp_Core_Layihe.Controllers
                 };
                 return View(blogVM);
             }
-          
-            
         }
         public async Task<IActionResult>   Detail(int id)
         {
