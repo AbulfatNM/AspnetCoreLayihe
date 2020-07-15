@@ -72,7 +72,7 @@ using Asp_Core_Layihe.Helpers;
             WriteLiteral("</p>\r\n    </div>\r\n    <div class=\"row mt-4\">\r\n        ");
             EndContext();
             BeginContext(219, 91, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7457fba490e64244bfbe8cb3668b9d67", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4801b6b305a84d4e8425e52e9cb51141", async() => {
                 BeginContext(299, 7, true);
                 WriteLiteral("Go Back");
                 EndContext();

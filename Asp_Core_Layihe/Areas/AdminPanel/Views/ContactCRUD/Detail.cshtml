@@ -1,0 +1,20 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <img style="width:450px; height:250px" src="~/img/contact/@Model.Image" />
+
+    </div>
+    <div class="text-center mt-3">
+        <h2>@Model.City </h2>
+        <p>@Model.Address  </p>
+    </div>
+    <div class="row mt-4">
+        <a class="btn btn-dark text-white" asp-controller="ContactCRUD" asp-action="Index">Go Back</a>
+    </div>
+</div>
+

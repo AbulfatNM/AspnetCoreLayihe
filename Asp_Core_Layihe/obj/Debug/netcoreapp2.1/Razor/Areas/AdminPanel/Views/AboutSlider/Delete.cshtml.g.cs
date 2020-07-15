@@ -71,7 +71,7 @@ using Asp_Core_Layihe.Helpers;
             WriteLiteral("\r\n    <div class=\"container\">\r\n        <div class=\"row \">\r\n            <div class=\"col-lg-6\">\r\n                <h4>Image</h4>\r\n                ");
             EndContext();
             BeginContext(187, 78, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "1fcf53c7c1e74050ad51ab918228c245", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f0225d82f73347479c2b264609bcf5cf", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -97,7 +97,7 @@ AddHtmlAttributeValue("", 249, Model.Image, 249, 12, false);
             WriteLiteral("\r\n            </div>\r\n            <div class=\"col-lg-6\">\r\n                <h4>Background Image</h4>\r\n                ");
             EndContext();
             BeginContext(382, 88, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "cc8d40b6cb764487a04ab95b230945a7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "44d2692c17f242e3a011f78de1e271ab", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -153,7 +153,7 @@ AddHtmlAttributeValue("", 444, Model.BackgroundImage, 444, 22, false);
             WriteLiteral("  </p>\r\n            </div>\r\n        </div>\r\n        <div class=\"row mt-4\">\r\n            ");
             EndContext();
             BeginContext(830, 94, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3df6edb707834f5bac61a64c327a3b45", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b3d32fa6b79e45b0a3de072e0e93de20", async() => {
                 BeginContext(913, 7, true);
                 WriteLiteral("Go Back");
                 EndContext();
@@ -178,7 +178,7 @@ AddHtmlAttributeValue("", 444, Model.BackgroundImage, 444, 22, false);
             WriteLiteral("\r\n            ");
             EndContext();
             BeginContext(938, 145, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "31ae1e220de44842bb1c9d467cc1c814", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aa045199c5e64ec68a65c84c39db69a6", async() => {
                 BeginContext(984, 92, true);
                 WriteLiteral("\r\n                <button type=\"submit\" class=\"btn btn-danger\">Delete</button>\r\n            ");
                 EndContext();

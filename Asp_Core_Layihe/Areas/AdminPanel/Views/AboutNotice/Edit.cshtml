@@ -1,0 +1,36 @@
+﻿@model AboutNotice
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="text-center mt-3">
+    <h4>Date</h4>
+    <p>@Model.Date </p>
+    <h4 style="margin: 10px 0px;">Description</h4>
+    <p>@Model.Description</p>
+</div>
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Create About Notice </h4>
+                <form method="post" class="forms-sample mt-5" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <h5>Date </h5>
+                        <input asp-for="Date" class="form-control" id="exampleInputUsername1" placeholder="Write the category name" accept="image/*">
+                        <span class="text-danger" asp-validation-for="Date"></span>
+                        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                        <h5 style="line-height:3">Description </h5>
+                        <input asp-for="Description" class="form-control" id="exampleInputUsername1" placeholder="Write the Title">
+                        <span class="text-danger" asp-validation-for="Description"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                </form>
+                <div class="mt-3">
+                    <a class="btn btn-dark text-white" asp-controller="AboutNotice" asp-action="Index">Go Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

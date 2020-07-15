@@ -1,0 +1,37 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Create Contact</h4>
+                <form method="post" class="forms-sample mt-5" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <h5>Contact Image </h5>
+                        <input asp-for="ContactPhoto" class="form-control" id="exampleInputUsername1" placeholder="Write the category name" accept="image/*">
+                        <span class="text-danger" asp-validation-for="ContactPhoto"></span>
+                        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                        <h5 class="mt3">Contact Address </h5>
+                        <input asp-for="Address" class="form-control" id="exampleInputUsername1" placeholder="Write the Title">
+                        <span class="text-danger" asp-validation-for="Address"></span>
+                        <h5 class="mt3">Contact City</h5>
+                        <input asp-for="City" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                        <span class="text-danger" asp-validation-for="City"></span>
+                        @*<textarea id="editor" asp-for="CategoryName" placeholder="Write the category name"></textarea>*@
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                </form>
+                <div class="mt-3">
+                    <a class="btn btn-dark text-white" asp-controller="ContactCRUD" asp-action="Index">Go Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

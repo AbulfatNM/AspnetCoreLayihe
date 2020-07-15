@@ -1,0 +1,44 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "Edit";
+}
+
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+
+                    <div class="row d-flex justify-content-center">
+                        <img style="width:450px; height:250px" src="~/img/contact/@Model.Image" />
+
+                    </div>
+                    <div class="text-center mt-3">
+                        <h2>@Model.City </h2>
+                        <p>@Model.Address </p>
+                    </div>
+                    <form method="post" class="forms-sample mt-5" enctype="multipart/form-data">
+                        <h4 class="card-title">Edit About Welcome</h4>
+                        <div class="form-group">
+                            <h5>Contact Image </h5>
+
+                            <input asp-for="ContactPhoto" class="form-control" id="exampleInputUsername1" placeholder="Write the category name" accept="image/*">
+                            <span class="text-danger" asp-validation-for="ContactPhoto"></span>
+                            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                            <h5 class="mt3">Contact Address </h5>
+                            <input asp-for="Address" class="form-control" id="exampleInputUsername1" placeholder="Write the Title">
+                            <span class="text-danger" asp-validation-for="Address"></span>
+                            <h5 class="mt3">Contact City</h5>
+                            <input asp-for="City" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                            <span class="text-danger" asp-validation-for="City"></span>
+                            @*<textarea id="editor" asp-for="CategoryName" placeholder="Write the category name"></textarea>*@
+                        </div>
+                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    </form>
+                    <div class="mt-3">
+                        <a class="btn btn-dark text-white" asp-controller="ContactCRUD" asp-action="Index">Go Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+

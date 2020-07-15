@@ -1,0 +1,58 @@
+﻿@model IEnumerable<AboutNotice>
+
+@{
+
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">About Notice</h4>
+                <div class="d-flex justify-content-end">
+                    <a class="btn btn-success" asp-controller="AboutNotice" asp-action="Create">About Notice Create</a>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Date
+                                </th>
+                                <th>
+                                    Setting
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (AboutNotice aboutNotice in Model)
+                            {
+                            <tr>
+                                <td class="text-danger">
+                                    @aboutNotice.Date.ToString("dd/MMM/yyyy").ToUpper()
+                                </td>
+                                <td>
+                                    <a class="btn btn-primary" asp-action="Detail" asp-route-id="@aboutNotice.Id">
+                                        <i class="mdi mdi-information-variant"></i>
+                                    </a>
+                                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@aboutNotice.Id">
+                                        <i class="mdi mdi-border-color"></i>
+                                    </a>
+                                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@aboutNotice.Id">
+                                        <i class="mdi mdi-delete-variant"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

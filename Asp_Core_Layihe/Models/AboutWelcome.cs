@@ -15,7 +15,7 @@ namespace Asp_Core_Layihe.Models
         [Required,StringLength(150)]
         public string Title { get; set; }
 
-        [Required, MinLength(150)]
+        [Required, MinLength(30)]
         public string Description { get; set; }
 
         public string Image { get; set; }

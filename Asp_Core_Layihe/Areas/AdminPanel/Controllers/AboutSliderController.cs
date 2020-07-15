@@ -13,7 +13,8 @@ namespace Asp_Core_Layihe.Areas.AdminPanel.Controllers
 {
     [Area("AdminPanel")]
     public class AboutSliderController : Controller
-    { private readonly AppDbContex _db;
+    {   
+        private readonly AppDbContex _db;
         private readonly IHostingEnvironment _env;
         public AboutSliderController(AppDbContex db,IHostingEnvironment env)
         {

@@ -99,7 +99,7 @@ using Asp_Core_Layihe.Helpers;
             WriteLiteral("</p>\r\n           \r\n        </div>\r\n        <div class=\"row mt-4\">\r\n            <div class=\"col-12 \">\r\n                ");
             EndContext();
             BeginContext(681, 154, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "343739b688864833a00e17804abdbab2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b99769a73c8947a49170ddac7a1188a2", async() => {
                 BeginContext(728, 100, true);
                 WriteLiteral("\r\n                    <button type=\"submit\" class=\"btn btn-danger\">Delete</button>\r\n                ");
                 EndContext();
@@ -124,7 +124,7 @@ using Asp_Core_Layihe.Helpers;
             WriteLiteral("\r\n            </div>\r\n            ");
             EndContext();
             BeginContext(869, 103, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3082b60fc1a24c3e885cf9152032e32c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aa98c978b29f4c5389f97702264c79f2", async() => {
                 BeginContext(961, 7, true);
                 WriteLiteral("Go Back");
                 EndContext();

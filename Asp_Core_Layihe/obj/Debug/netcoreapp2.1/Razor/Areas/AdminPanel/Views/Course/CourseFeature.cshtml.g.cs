@@ -81,7 +81,7 @@ using Asp_Core_Layihe.Helpers;
             WriteLiteral("                        ");
             EndContext();
             BeginContext(764, 92, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cccdc4b37d0c431d86408b0eaf25a400", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8a34872d8f874a5c87d742728195ddae", async() => {
                 BeginContext(839, 13, true);
                 WriteLiteral("Create Slider");
                 EndContext();
@@ -243,7 +243,7 @@ using Asp_Core_Layihe.Helpers;
             WriteLiteral("\r\n                                </td>\r\n                                <td>\r\n                                    ");
             EndContext();
             BeginContext(3642, 243, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "164619bd701d44ed93c927a0cb5c51a2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6e495942723a44248df5d5edcdd72dd0", async() => {
                 BeginContext(3758, 123, true);
                 WriteLiteral("\r\n                                        <i class=\"mdi mdi-information-variant\"></i>\r\n                                    ");
                 EndContext();
@@ -281,7 +281,7 @@ using Asp_Core_Layihe.Helpers;
             WriteLiteral("\r\n                                    ");
             EndContext();
             BeginContext(3923, 234, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4d697c7073ef4345a616ff6fb5037fde", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c303f1f7588344b6b88b5ec4464e2f75", async() => {
                 BeginContext(4037, 116, true);
                 WriteLiteral("\r\n                                        <i class=\"mdi mdi-border-color\"></i>\r\n                                    ");
                 EndContext();
@@ -319,7 +319,7 @@ using Asp_Core_Layihe.Helpers;
             WriteLiteral("\r\n                                    ");
             EndContext();
             BeginContext(4195, 237, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a935f5a9cea14a03b25a8cc45d02bac0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "477b71f5b1d148f6824185ef3e35b562", async() => {
                 BeginContext(4310, 118, true);
                 WriteLiteral("\r\n                                        <i class=\"mdi mdi-delete-variant\"></i>\r\n                                    ");
                 EndContext();

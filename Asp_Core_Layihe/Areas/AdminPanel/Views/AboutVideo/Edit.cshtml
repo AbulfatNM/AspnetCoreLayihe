@@ -1,0 +1,32 @@
+﻿@model AboutVideo
+@{
+    ViewData["Title"] = "Edit";
+}
+
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-center mt-3">
+                        <p>@Model.VideoLink</p>
+                      
+                    </div>
+                    <form method="post" class="forms-sample mt-5" enctype="multipart/form-data">
+                        <h4 class="card-title mb-4">Edit Video Link</h4>
+                        <div class="form-group">
+                            <h6>Video link </h6>
+
+                            <input asp-for="VideoLink" class="form-control" id="exampleInputUsername1" placeholder="Write the category name" accept="image/*">
+                            <span class="text-danger" asp-validation-for="VideoLink"></span>
+                            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                            @*<textarea id="editor" asp-for="CategoryName" placeholder="Write the category name"></textarea>*@
+                        </div>
+                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    </form>
+                    <div class="mt-3">
+                        <a class="btn btn-dark text-white" asp-controller="AboutVideo" asp-action="Index">Go Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

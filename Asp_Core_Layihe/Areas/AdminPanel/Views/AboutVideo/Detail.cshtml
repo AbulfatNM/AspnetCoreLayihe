@@ -1,0 +1,19 @@
+﻿@model AboutVideo
+@{
+    ViewData["Title"] = "Detail";
+}
+
+    <div class="container">
+        <div class="text-center">
+            <h5 class="mb-4">Video Link</h5>
+          <a href="#">@Model.VideoLink</a>
+        </div>
+        <div class="row">
+
+            <div class="row mt-4">
+                <a class="btn btn-dark text-white" asp-controller="AboutVideo" asp-action="Index">Go Back</a>
+            </div>
+        </div>
+      
+    </div>
+

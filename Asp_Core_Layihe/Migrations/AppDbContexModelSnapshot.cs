@@ -25,8 +25,7 @@ namespace Asp_Core_Layihe.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("Date")
-                        .HasMaxLength(150);
+                    b.Property<DateTime>("Date");
 
                     b.Property<string>("Description")
                         .IsRequired()
