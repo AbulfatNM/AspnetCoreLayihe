@@ -23,8 +23,13 @@ using Asp_Core_Layihe.Helpers;
 
 #line default
 #line hidden
+#line 3 "C:\Users\Abulfat\Desktop\Asp.Net Core Layihe\Asp_Core_Layihe\Asp_Core_Layihe\Areas\AdminPanel\Views\_ViewImports.cshtml"
+using Asp_Core_Layihe.Areas.AdminPanel.ViewModels;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"369b4cca907ef0138f51b546fc6d110950387faf", @"/Areas/AdminPanel/Views/Course/DetailCourseFature.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f938dc0f25473b3ab7faa97e81d6b59039a72429", @"/Areas/AdminPanel/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1a6c057f01c383f6e67849fd8ad52c47bbed6be1", @"/Areas/AdminPanel/Views/_ViewImports.cshtml")]
     public class Areas_AdminPanel_Views_Course_DetailCourseFature : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<CourseFeature>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("btn btn-dark text-white"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -159,7 +164,7 @@ using Asp_Core_Layihe.Helpers;
             WriteLiteral("</td>\r\n                </tr>\r\n        </tbody>\r\n    </table>\r\n<div class=\"row mt-4\">\r\n    ");
             EndContext();
             BeginContext(1093, 97, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92abe2bacb8d4acbbc1b61678ecd5f58", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "48a4873128ce4502a38c99df63a45b20", async() => {
                 BeginContext(1179, 7, true);
                 WriteLiteral("Go Back");
                 EndContext();

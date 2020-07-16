@@ -105,7 +105,7 @@ using Asp_Core_Layihe.Helpers;
             WriteLiteral("                        <div class=\"single-contact mb-65\">\r\n                            <div class=\"contact-icon\">\r\n                                ");
             EndContext();
             BeginContext(1390, 54, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "8b051646d2e044fcb78334f43de9a5b0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "9ce0e190d8484bd8a54c0c8f0f6203c0", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -166,7 +166,7 @@ AddHtmlAttributeValue("", 1414, contact.Image, 1414, 14, false);
                     ");
             EndContext();
             BeginContext(2189, 1139, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "47a5ff4d830d42ed92bcd7ef1c265cb4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2fd5f6c5c0dd456da69bce49ceba3dfc", async() => {
                 BeginContext(2278, 1043, true);
                 WriteLiteral(@"
                         <div class=""row"">

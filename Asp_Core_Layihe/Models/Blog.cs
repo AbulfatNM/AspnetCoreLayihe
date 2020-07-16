@@ -1,7 +1,10 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -20,6 +23,8 @@ namespace Asp_Core_Layihe.Models
         [Required]
         public string AppUserId { get; set; }
         public int CategoryId { get; set; }
-         public virtual Category Category { get; set; }
+        public virtual Category Category { get; set; }
+        [NotMapped]
+        public IFormFile PhotoBlog { get; set; }
     }
 }

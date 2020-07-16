@@ -23,8 +23,13 @@ using Asp_Core_Layihe.Helpers;
 
 #line default
 #line hidden
+#line 3 "C:\Users\Abulfat\Desktop\Asp.Net Core Layihe\Asp_Core_Layihe\Asp_Core_Layihe\Areas\AdminPanel\Views\_ViewImports.cshtml"
+using Asp_Core_Layihe.Areas.AdminPanel.ViewModels;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e123d8e420a0bfe182c55f6131b8b81b7d718be6", @"/Areas/AdminPanel/Views/Course/Course.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f938dc0f25473b3ab7faa97e81d6b59039a72429", @"/Areas/AdminPanel/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1a6c057f01c383f6e67849fd8ad52c47bbed6be1", @"/Areas/AdminPanel/Views/_ViewImports.cshtml")]
     public class Areas_AdminPanel_Views_Course_Course : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<Course>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("btn btn-success"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -77,7 +82,7 @@ using Asp_Core_Layihe.Helpers;
                         ");
             EndContext();
             BeginContext(368, 100, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d7db82caf6fc417eabbab0bf3624a935", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0e95dbbb1b7840be9a1782786ada8ed0", async() => {
                 BeginContext(451, 13, true);
                 WriteLiteral("Create Course");
                 EndContext();
@@ -111,7 +116,7 @@ using Asp_Core_Layihe.Helpers;
             WriteLiteral("                            ");
             EndContext();
             BeginContext(670, 100, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "45b44ed664e9488bacc3ed225195511a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "733c1406c27e4ac8a488f9618269fc62", async() => {
                 BeginContext(753, 13, true);
                 WriteLiteral("Create Slider");
                 EndContext();
@@ -172,7 +177,7 @@ using Asp_Core_Layihe.Helpers;
             WriteLiteral("                                    <tr>\r\n                                        <td>\r\n                                            ");
             EndContext();
             BeginContext(1734, 74, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a4d58e068d6b4c438c533dd1e3050f70", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "c08824a182c6492cb883a86d99a3de3c", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -208,7 +213,7 @@ AddHtmlAttributeValue("", 1791, course.Image, 1791, 13, false);
             WriteLiteral("\r\n                                        </td>\r\n                                        <td>\r\n                                            ");
             EndContext();
             BeginContext(2144, 252, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "612c923b8fcb47d6bea6cd923d001cf2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bb29f79778864d40a685df8468efe739", async() => {
                 BeginContext(2253, 139, true);
                 WriteLiteral("\r\n                                                <i class=\"mdi mdi-information-variant\"></i>\r\n                                            ");
                 EndContext();
@@ -246,7 +251,7 @@ AddHtmlAttributeValue("", 1791, course.Image, 1791, 13, false);
             WriteLiteral("\r\n                                            ");
             EndContext();
             BeginContext(2442, 243, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edda190f026146dabcb2926e04da38cf", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "93d2da46c38046e4b52e6560ce8c32c8", async() => {
                 BeginContext(2549, 132, true);
                 WriteLiteral("\r\n                                                <i class=\"mdi mdi-border-color\"></i>\r\n                                            ");
                 EndContext();
@@ -284,7 +289,7 @@ AddHtmlAttributeValue("", 1791, course.Image, 1791, 13, false);
             WriteLiteral("\r\n                                            ");
             EndContext();
             BeginContext(2731, 246, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3e8ca500eb604e5c8e0f04fa8f91c3d7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6060201b085648f68429a200439ace0e", async() => {
                 BeginContext(2839, 134, true);
                 WriteLiteral("\r\n                                                <i class=\"mdi mdi-delete-variant\"></i>\r\n                                            ");
                 EndContext();

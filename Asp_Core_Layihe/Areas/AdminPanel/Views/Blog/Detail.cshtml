@@ -1,0 +1,28 @@
+﻿@model BlogCrudVM
+@{
+    ViewData["Title"] = "Detail";
+}
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <img style="width:450px; height:250px" src="~/img/blog/@Model.Blog.Image" />
+
+    </div>
+    <div class="text-center mt-3">
+        <h5>BY</h5>
+        <p>@Model.Blog.AppUserId</p>
+        <h5 class="mt-3">Title</h5>
+        <p>@Model.Blog.Title</p>
+        <h5 class="mt-3">Blog Category</h5>
+        <p>@Model.Category.CategoryName</p>
+        <h5 class="mt-3">Description</h5>
+        <p>@Model.Blog.Description</p>
+
+        <h5 class="mt-3">Date</h5>
+        <p>@Model.Blog.Date.ToString("dd/MMM/yyyy").ToUpper()</p>
+    </div>
+    <div class="row mt-4">
+        <a class="btn btn-dark text-white" asp-controller="Blog" asp-action="Index">Go Back</a>
+    </div>
+</div>
+
+

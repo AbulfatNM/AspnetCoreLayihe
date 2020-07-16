@@ -58,18 +58,18 @@ namespace Asp_Core_Layihe.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task <IActionResult> LogIn(LoginVM login)
+     public async Task<IActionResult> LogIn(LoginVM login)
         {
             if (!ModelState.IsValid) return View(login);
-          
+
             AppUser logiUser = await _userManager.FindByEmailAsync(login.Email);
-            if (logiUser==null)
+            if (logiUser == null)
             {
                 ModelState.AddModelError("", "Daxil edilən email və ya parol səhvdir !!! ");
                 return View(login);
             }
             var signinResult = await _signInManager.PasswordSignInAsync(logiUser, login.Password, false, true);
-            if(! signinResult.Succeeded)
+            if (!signinResult.Succeeded)
             {
                 ModelState.AddModelError("", "Daxil edilən email və ya parol səhvdir !!! ");
                 return View(login);
