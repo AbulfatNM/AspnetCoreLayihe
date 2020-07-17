@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,6 +18,8 @@ namespace Asp_Core_Layihe.Models
         [Required,StringLength(65)]
         public string Position { get; set; }
         public ICollection<EventToSpeaker> EventToSpeakers { get; set; }
+        [NotMapped]
+        public IFormFile PhotoSpeaker { get; set; }
 
     }
 }

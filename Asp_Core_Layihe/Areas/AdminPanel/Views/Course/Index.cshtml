@@ -1,11 +1,58 @@
-﻿
-@*@{
+﻿@model IEnumerable<Course>  
+@{
     ViewData["Title"] = "Index";
 }
 
-    <div class="row d-flex justify-content-center mt-5">
-        <a class="btn btn-inverse-secondary" asp-action="CourseFeature">COURSE FEATURES</a>
-        <a class="btn btn-inverse-secondary text-black ml-5"asp-action="Course">COURSE</a>
-        <a class="btn btn-inverse-secondary text-black ml-5" asp-action="CourseContent">COURSE CONTENT</a>
-    </div>*@
+<div class="row">
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Course</h4>
+                <div class="d-flex justify-content-end">
+                    <a class="btn btn-success" asp-controller="Course" asp-action="Create">Create Course</a>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Image
+                                </th>
+                                <th>
+                                    Setting
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Course course in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <img style="width:150px; height:150px" src="~/img/course/@course.Image" />
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-primary" asp-action="Detail" asp-route-id="@course.Id">
+                                            <i class="mdi mdi-information-variant"></i>
+                                        </a>
+                                        <a class="btn btn-warning" asp-action="Edit" asp-route-id="@course.Id">
+                                            <i class="mdi mdi-border-color"></i>
+                                        </a>
+                                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@course.Id">
+                                            <i class="mdi mdi-delete-variant"></i>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 

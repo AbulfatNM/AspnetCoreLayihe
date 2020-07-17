@@ -98,9 +98,9 @@ using Asp_Core_Layihe.Helpers;
             WriteLiteral("                <div class=\"col-md-4 col-sm-6 col-xs-12\">\r\n                    <div class=\"single-blog mb-60\">\r\n                        <div class=\"blog-img\">\r\n                            ");
             EndContext();
             BeginContext(958, 96, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7cb8887101ba4742b1924d73fa25aeb5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "581a5c3493b74ecf9a10d78d478804b1", async() => {
                 BeginContext(1005, 45, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "e30781ea6c404860ab7348754c2118a0", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "0bdc7cf97fef4d30bce832c326f9d3ea", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -184,7 +184,7 @@ AddHtmlAttributeValue("", 1026, blog.Image, 1026, 11, false);
                                 ");
             EndContext();
             BeginContext(1787, 60, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ce27012c781342c7ae537715410df1db", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6f29c99392624ebd8942c05f7468eda0", async() => {
                 BeginContext(1834, 9, true);
                 WriteLiteral("read more");
                 EndContext();

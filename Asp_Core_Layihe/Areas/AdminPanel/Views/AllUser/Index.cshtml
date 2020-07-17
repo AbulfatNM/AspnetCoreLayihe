@@ -1,0 +1,66 @@
+﻿@model IEnumerable<UserVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Index</title>
+</head>
+<body>
+    <div class=" container">
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Full Name</th>
+                            <th scope="col">Email</th>
+                            <th>Rols</th>
+                            <th>Change Rols</th>
+                            <th>Remove User</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (UserVM user in Model.Where(u => u.IsDelete == false))
+                        {
+                            <tr>
+                                <td>@user.FullName</td>
+                                <td>@user.Email</td>
+                                <td>@user.Role</td>
+                                <td>
+                                    <form method="post" asp-action="ChangeRols">
+                                        <select name="rolname">
+                                            @foreach (string item in Enum.GetNames(typeof(Email.UserRols)))
+                                            {
+                                                if (item != user.Role)
+                                                {
+                                                    <option value="@item">
+                                                        @item
+                                                    </option>
+                                                }
+                                            }
+                                        </select>
+                                        <input name="email" type="hidden" value="@user.Email" />
+                                        <input type="submit" class="btn btn-success ml-3" value="Change" />
+                                    </form>
+                                </td>
+                                <td>
+                                    @if (user.Role != Email.UserRols.Admin.ToString())
+                                    {
+                                        <a asp-action="RemoveUser" asp-route-email="@user.Email" class="btn btn-danger">Remove</a>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

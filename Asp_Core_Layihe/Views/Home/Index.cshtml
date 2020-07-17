@@ -169,7 +169,7 @@
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="single-event mb-35">
                         <div class="event-img">
-                            <a href="event-details.html"><img style="width:250px" src="~/img/event/@events.Image" alt="event"></a>
+                            <a asp-controller="Event" asp-action="Detail" asp-route-id="@events.Id" ><img style="width:250px" src="~/img/event/@events.Image" alt="event"></a>
                         </div>
                         <div class="event-content text-left">
                             <h3>@events.Date.ToString("dd MMM yyyy").ToUpper()</h3>

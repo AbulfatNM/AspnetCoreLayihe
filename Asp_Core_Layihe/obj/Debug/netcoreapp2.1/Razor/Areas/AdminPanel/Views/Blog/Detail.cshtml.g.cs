@@ -69,7 +69,7 @@ using Asp_Core_Layihe.Areas.AdminPanel.ViewModels;
             WriteLiteral("<div class=\"container\">\r\n    <div class=\"row d-flex justify-content-center\">\r\n        ");
             EndContext();
             BeginContext(147, 76, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "be51ce089c864daf8be614476cbfdb88", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "577c971cc7fe49c48238394fcc4beb13", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -145,7 +145,7 @@ AddHtmlAttributeValue("", 202, Model.Blog.Image, 202, 17, false);
             WriteLiteral("</p>\r\n    </div>\r\n    <div class=\"row mt-4\">\r\n        ");
             EndContext();
             BeginContext(731, 87, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6f16780500944d58998fd4f2b956831a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "16fca82cfb3246f4af0814d450bbd680", async() => {
                 BeginContext(807, 7, true);
                 WriteLiteral("Go Back");
                 EndContext();

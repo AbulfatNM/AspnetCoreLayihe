@@ -113,7 +113,7 @@ WriteAttributeValue("", 1262, aboutVideo.VideoLink, 1262, 21, false);
             WriteLiteral("</a>\r\n                                    </td>\r\n                                    <td>\r\n                                        ");
             EndContext();
             BeginContext(1437, 212, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "68565ff04d3349d3bada3a06de563e06", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "778102f3891b404d90024e63a09dbde7", async() => {
                 BeginContext(1514, 131, true);
                 WriteLiteral("\r\n                                            <i class=\"mdi mdi-information-variant\"></i>\r\n                                        ");
                 EndContext();
@@ -149,7 +149,7 @@ WriteAttributeValue("", 1262, aboutVideo.VideoLink, 1262, 21, false);
             WriteLiteral("\r\n                                        ");
             EndContext();
             BeginContext(1691, 203, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "11b50af5bc944c94bcf1b19d91a234cf", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c857d5bf5ab044bf8e0f8b6a96f2c18b", async() => {
                 BeginContext(1766, 124, true);
                 WriteLiteral("\r\n                                            <i class=\"mdi mdi-border-color\"></i>\r\n                                        ");
                 EndContext();

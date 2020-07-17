@@ -65,6 +65,22 @@
     })
 
     //Event search end
+    //Course search start
+    $("#CourseSearch").keyup(function () {
+        let searchBlog = $(this).val();
+        $("#Course-form li").remove()
+        if (searchBlog.length >= 2) {
+            $.ajax({
+                url: "/Courses/CourseSearch?search=" + searchBlog,
+                type: "Get",
+                success: function (res) {
+                    $("#Course-form").append(res)
+                }
+            })
+        }
+    })
+
+    //Course search end
 "use strict";  
     
 /*------------------------------------

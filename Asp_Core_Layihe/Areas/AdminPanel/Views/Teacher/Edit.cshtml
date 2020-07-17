@@ -1,0 +1,100 @@
+﻿@model TeacherVM
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <img style="width:450px; height:250px" src="~/img/teacher/@Model.Teacher.Image" />
+
+        </div>
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Create Teacher </h4>
+                        <form method="post" class="forms-sample mt-5" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <h5>Teacher Image </h5>
+                                <input asp-for="Teacher.PhotoTeacher" class="form-control" id="exampleInputUsername1" placeholder="Write the category name" accept="image/*">
+                                <span class="text-danger" asp-validation-for="Teacher.PhotoTeacher"></span>
+                                <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                                <h5 class="mt-3">Teacherr FullName </h5>
+                                <input asp-for="Teacher.FullName" class="form-control" id="exampleInputUsername1" placeholder="Write the Title">
+                                <span class="text-danger" asp-validation-for="Teacher.FullName"></span>
+                                <h5 class="mt-3">Teacherr Position </h5>
+                                <input asp-for="Teacher.Position" class="form-control" id="exampleInputUsername1" placeholder="Write the Title">
+                                <span class="text-danger" asp-validation-for="Teacher.Position"></span>
+                                <h5 class="mt-3">Teacher About </h5>
+                                <input asp-for="Teacher.About" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                                <span class="text-danger" asp-validation-for="Teacher.About"></span>
+                                <h5 class="mt-3">Teacher DEGREE </h5>
+                                <input asp-for="Teacher.DEGREE" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                                <span class="text-danger" asp-validation-for="Teacher.DEGREE"></span>
+                                <h5 class="mt-3">Teacher EXPERIENCE </h5>
+                                <input asp-for="Teacher.EXPERIENCE" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                                <span class="text-danger" asp-validation-for="Teacher.EXPERIENCE"></span>
+                                <h5 class="mt-3">Teacher HOBBIES </h5>
+                                <input asp-for="Teacher.HOBBIES" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                                <span class="text-danger" asp-validation-for="Teacher.HOBBIES"></span>
+                                <h5 class="mt-3">Teacher Position </h5>
+                                <input asp-for="Teacher.FACULTY" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                                <span class="text-danger" asp-validation-for="Teacher.FACULTY"></span>
+                                <h5 class="mt-3">Teacher Email </h5>
+                                <input asp-for="TeacherContact.Email" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                                <span class="text-danger" asp-validation-for="TeacherContact.Email"></span>
+                                <h5 class="mt-3">Teacher Phone </h5>
+                                <input asp-for="TeacherContact.Phone" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                                <span class="text-danger" asp-validation-for="TeacherContact.Phone"></span>
+                                <h5 class="mt-3">Teacher SKYPE </h5>
+                                <input asp-for="TeacherContact.SKYPE" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                                <span class="text-danger" asp-validation-for="TeacherContact.SKYPE"></span>
+                                <h5 class="mt-3">Teacher Facebook</h5>
+                                <input asp-for="TeacherContact.Facebook" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                                <span class="text-danger" asp-validation-for="TeacherContact.Facebook"></span>
+                                <h5 class="mt-3">Teacher Twitter </h5>
+                                <input asp-for="TeacherContact.Twitter" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                                <span class="text-danger" asp-validation-for="TeacherContact.Twitter"></span>
+                                <h5 class="mt-3">Teacher Linkedin </h5>
+                                <input asp-for="TeacherContact.Linkedin" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                                <span class="text-danger" asp-validation-for="TeacherContact.Linkedin"></span>
+                                <h5 class="mt-3">Teacher Language </h5>
+                                <input asp-for="SkillsTeacher.Language" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                                <span class="text-danger" asp-validation-for="SkillsTeacher.Language"></span>
+                                <h5 class="mt-3">Teacher Team Leader  </h5>
+                                <input asp-for="SkillsTeacher.Team_Leader" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                                <span class="text-danger" asp-validation-for="SkillsTeacher.Team_Leader"></span>
+                                <h5 class="mt-3">Teacher Development </h5>
+                                <input asp-for="SkillsTeacher.Development" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                                <span class="text-danger" asp-validation-for="SkillsTeacher.Development"></span>
+                                <h5 class="mt-3">Teacher Design </h5>
+                                <input asp-for="SkillsTeacher.Design" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                                <span class="text-danger" asp-validation-for="SkillsTeacher.Design"></span>
+                                <h5 class="mt-3">Teacher Innovation </h5>
+                                <input asp-for="SkillsTeacher.Innovation" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                                <span class="text-danger" asp-validation-for="SkillsTeacher.Innovation"></span>
+                                <h5 class="mt-3">Teacher Communication </h5>
+                                <input asp-for="SkillsTeacher.Communication" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                                <span class="text-danger" asp-validation-for="SkillsTeacher.Communication"></span>
+                                @*<textarea id="editor" asp-for="CategoryName" placeholder="Write the category name"></textarea>*@
+                            </div>
+                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                        </form>
+                        <div class="mt-3">
+                            <a class="btn btn-dark text-white" asp-controller="Teacher" asp-action="Index">Go Back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        @section Scripts{
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+        }
+
+ 
+
+

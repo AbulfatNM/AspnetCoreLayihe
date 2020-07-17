@@ -1,0 +1,29 @@
+﻿@model Event
+@{
+    ViewData["Title"] = "Delete";
+}
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <img style="width:450px; height:250px" src="~/img/event/@Model.Image" />
+
+        </div>
+        <div class="text-center mt-3">
+            <h5>Event Title</h5>
+            <p>@Model.Title</p>
+            <h5 class="mt-3">Event StartTime</h5>
+            <p>@Model.StartTime.ToString("HH")</p>
+            <h5 class="mt-3">Event EndTime</h5>
+            <p>@Model.EndTime.ToString("HH")</p>
+            <h5 class="mt-3">Event Venue</h5>
+            <p>@Model.Venue </p>
+            <h5 class="mt-3">Event Description</h5>
+            <p>@Model.Description</p>
+        </div>
+        <div class="row mt-4">
+            <a class="btn btn-dark text-white" asp-controller="Event" asp-action="Index">Go Back</a>
+            <form method="post" class="forms-sample ml-3">
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+        </div>
+    </div>
+

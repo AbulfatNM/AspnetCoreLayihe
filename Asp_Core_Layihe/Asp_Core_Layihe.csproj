@@ -33,6 +33,8 @@
     <Compile Remove="Migrations\20200709123542_CreateAboutTable.Designer.cs" />
     <Compile Remove="Migrations\20200709154142_CreateHomeSliderTable.cs" />
     <Compile Remove="Migrations\20200709154142_CreateHomeSliderTable.Designer.cs" />
+    <Compile Remove="Migrations\20200717204407_CreateTableReplies.cs" />
+    <Compile Remove="Migrations\20200717204407_CreateTableReplies.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

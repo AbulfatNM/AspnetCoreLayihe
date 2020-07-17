@@ -1,0 +1,55 @@
+﻿@model TeacherVM
+@{
+    ViewData["Title"] = "Detail";
+}
+
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <img style="width:450px; height:250px" src="~/img/teacher/@Model.Teacher.Image" />
+
+        </div>
+        <div class="text-center mt-3">
+            <h5 class="mt-3">Teacher FullName</h5>
+            <p>@Model.Teacher.FullName </p>
+            <h5 class="mt-3">Teacher Position</h5>
+            <p>@Model.Teacher.Position  </p>
+            <h5 class="mt-3">Teacher About</h5>
+            <p>@Model.Teacher.About  </p>
+            <h5 class="mt-3">Teacher DEGREE</h5>
+            <p>@Model.Teacher.DEGREE  </p>
+            <h5 class="mt-3">Teacher EXPERIENCE</h5>
+            <p>@Model.Teacher.EXPERIENCE  </p>
+            <h5 class="mt-3">Teacher.HOBBIES</h5>
+            <p>@Model.Teacher.HOBBIES  </p>
+            <h5 class="mt-3">Teacher.FACULTY</h5>
+            <p>@Model.Teacher.FACULTY  </p>
+            <h5 class="mt-3">Teacher Language</h5>
+            <p>@Model.SkillsTeacher.Language  </p>
+            <h5 class="mt-3">Teacher Team Leader</h5>
+            <p>@Model.SkillsTeacher.Team_Leader</p>
+            <h5 class="mt-3">Teacher Development</h5>
+            <p>@Model.SkillsTeacher.Development</p>
+            <h5 class="mt-3">Teacher Design</h5>
+            <p>@Model.SkillsTeacher.Design</p>
+            <h5 class="mt-3">Teacher Innovation</h5>
+            <p>@Model.SkillsTeacher.Innovation</p>
+            <h5 class="mt-3">Teacher Communication</h5>
+            <p>@Model.SkillsTeacher.Communication</p>
+            <h5 class="mt-3">Teacher Email</h5>
+            <p>@Model.TeacherContact.Email  </p>
+            <h5 class="mt-3">Teacher Phone</h5>
+            <p>@Model.TeacherContact.Phone  </p>
+            <h5 class="mt-3">Teacher SKYPE</h5>
+            <p>@Model.TeacherContact.SKYPE  </p>
+            <h5 class="mt-3">Teacher Facebook</h5>
+            <p>@Model.TeacherContact.Facebook  </p>
+            <h5 class="mt-3">Teacher Twitter</h5>
+            <p>@Model.TeacherContact.Twitter  </p>
+            <h5 class="mt-3">Teacher Linkedin </h5>
+            <p>@Model.TeacherContact.Linkedin  </p>
+        </div>
+        <div class="row mt-4">
+            <a class="btn btn-dark text-white" asp-controller="Teacher" asp-action="Index">Go Back</a>
+        </div>
+    </div>
+

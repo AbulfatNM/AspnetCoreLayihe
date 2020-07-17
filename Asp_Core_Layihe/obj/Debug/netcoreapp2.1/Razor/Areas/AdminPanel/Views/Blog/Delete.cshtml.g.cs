@@ -73,7 +73,7 @@ using Asp_Core_Layihe.Areas.AdminPanel.ViewModels;
             WriteLiteral("\r\n    <div class=\"container\">\r\n        <div class=\"row d-flex justify-content-center\">\r\n            ");
             EndContext();
             BeginContext(155, 71, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "bb1df3b044c44548b62e6e56da54e378", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ac21d79d98714a788dd5c3235a472bd4", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -149,7 +149,7 @@ AddHtmlAttributeValue("", 210, Model.Image, 210, 12, false);
             WriteLiteral("</p>\r\n        </div>\r\n        <div class=\"row mt-4\">\r\n            ");
             EndContext();
             BeginContext(767, 87, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ba16012e95a94b9cb8eaae0117d5e838", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "929a669233b3481ca3085dc1a1ac880d", async() => {
                 BeginContext(843, 7, true);
                 WriteLiteral("Go Back");
                 EndContext();
@@ -174,7 +174,7 @@ AddHtmlAttributeValue("", 210, Model.Image, 210, 12, false);
             WriteLiteral("\r\n            ");
             EndContext();
             BeginContext(868, 145, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9289bed388bc4d30b7134f36df3c01f9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "54449bc237864d538efab13461efd3f4", async() => {
                 BeginContext(914, 92, true);
                 WriteLiteral("\r\n                <button type=\"submit\" class=\"btn btn-danger\">Delete</button>\r\n            ");
                 EndContext();

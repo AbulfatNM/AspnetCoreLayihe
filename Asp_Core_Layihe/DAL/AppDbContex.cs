@@ -33,6 +33,7 @@ namespace Asp_Core_Layihe.DAL
         public DbSet<AboutVideo> AboutVideos { get; set; }
         public DbSet<AboutWelcome> AboutWelcomes { get; set; }
         public DbSet<HomeSlider> HomeSliders { get; set; }
+        public DbSet<Reply> Replies { get; set; }
 
 
 

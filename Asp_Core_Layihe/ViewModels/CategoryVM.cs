@@ -10,5 +10,6 @@ namespace Asp_Core_Layihe.ViewModels
     {
         public Course Course { get; set; }
         public IEnumerable<Course> Courses { get; set; }
+        public Reply Reply { get; set; }
     }
 }
