@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Required meta tags -->
@@ -15,6 +16,7 @@
     <link rel="stylesheet" href="~/admin/css/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="~/admin/images/favicon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
@@ -23,14 +25,14 @@
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="navbar-brand-wrapper d-flex justify-content-center">
                 <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
-                    <a class="navbar-brand brand-logo" href="~/admin/index.html"><img src="~/admin/images/logo.svg" alt="logo" /></a>
+                    <a class="navbar-brand brand-logo" href="~/admin/index.html"><img src="~/img/logo/logo2.png" alt="logo" /></a>
                     <a class="navbar-brand brand-logo-mini" href="~/admin/index.html"><img src="~/admin/images/logo-mini.svg" alt="logo" /></a>
                     <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
                         <span class="mdi mdi-sort-variant"></span>
                     </button>
                 </div>
             </div>
-            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+            @*<div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
                 <ul class="navbar-nav mr-lg-4 w-100">
                     <li class="nav-item nav-search d-none d-lg-block w-100">
                         <div class="input-group">
@@ -160,7 +162,7 @@
                 <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
                     <span class="mdi mdi-menu"></span>
                 </button>
-            </div>
+            </div>*@
         </nav>
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
@@ -184,7 +186,7 @@
                             <ul class="nav flex-column sub-menu">
                                 <li class="nav-item"> <a class="nav-link" asp-area="AdminPanel" asp-controller="HomeSlider" asp-action="Index">Home Slider</a></li>
                                 <li class="nav-item"> <a class="nav-link" asp-area="AdminPanel" asp-controller="Category" asp-action="Index">Category</a></li>
-                                <li class="nav-item"><a class="nav-link" asp-area="AdminPanel" asp-controller="Course" asp-action="Course">Course</a> </li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="AdminPanel" asp-controller="Course" asp-action="Index">Course</a></li>
                                 <li class="nav-item"><a class="nav-link" asp-area="AdminPanel" asp-controller="Bio" asp-action="Index">Bio</a> </li>
                                 <li class="nav-item"> <a class="nav-link" asp-area="AdminPanel" asp-controller="AboutSlider" asp-action="Index">About Slider</a></li>
                                 <li class="nav-item"> <a class="nav-link" asp-area="AdminPanel" asp-controller="AboutWelcome" asp-action="Index">About Welcome</a></li>
@@ -192,8 +194,9 @@
                                 <li class="nav-item"> <a class="nav-link" asp-area="AdminPanel" asp-controller="AboutVideo" asp-action="Index">About Video</a></li>
                                 <li class="nav-item"> <a class="nav-link" asp-area="AdminPanel" asp-controller="AboutNotice" asp-action="Index">About Notice</a></li>
                                 <li class="nav-item"> <a class="nav-link" asp-area="AdminPanel" asp-controller="Blog" asp-action="Index">Blog</a></li>
-
-
+                                <li class="nav-item"> <a class="nav-link" asp-area="AdminPanel" asp-controller="Teacher" asp-action="Index">Teacher</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="AdminPanel" asp-controller="Speaker" asp-action="Index">Speaker</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="AdminPanel" asp-controller="Event" asp-action="Index">Event</a></li>
                             </ul>
                         </div>
                     </li>
@@ -204,9 +207,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="~/admin/pages/charts/chartjs.html">
+                        <a class="nav-link"  asp-controller="AllUser" asp-action="Index">
                             <i class="mdi mdi-chart-pie menu-icon"></i>
-                            <span class="menu-title">Charts</span>
+                            <span class="menu-title">Users</span>
                         </a>
                     </li>
                     <li class="nav-item">

@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <!-- Banner Area Start -->
-<div class="banner-area-wrapper">
+@*<div class="banner-area-wrapper">
     <div class="banner-area text-center">
         <div class="container">
             <div class="row">
@@ -18,12 +18,12 @@
             </div>
         </div>
     </div>
-</div>
+</div>*@
 <!-- Banner Area End -->
 <!-- Course Start -->
 <div class="course-area pt-150 pb-150">
     <div class="container">
-        <div class="row">
+        @*<div class="row">
             <div class="col-xs-12">
                 <div class="course-title">
                     <h3>search courses</h3>
@@ -35,14 +35,14 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div>*@
         <div class="row">
             @foreach (Course course in Model)
             {
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="single-course mb-70">
                         <div class="course-img">
-                            <a asp-action="Detail"asp-route-id="@course.Id">
+                            <a  asp-action="Detail"asp-route-id="@course.Id">
                                 <img src="~/img/course/@course.Image" alt="course">
                                 <div class="course-hover">
                                     <i class="fa fa-link"></i>

@@ -77,7 +77,7 @@ using Asp_Core_Layihe.Areas.AdminPanel.ViewModels;
             WriteLiteral("</a>\r\n        </div>\r\n        <div class=\"row\">\r\n\r\n            <div class=\"row mt-4\">\r\n                ");
             EndContext();
             BeginContext(314, 93, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1508ac69f6964ed4a1ecd15346f29022", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f0b4139f032e43adb10678a7d722444e", async() => {
                 BeginContext(396, 7, true);
                 WriteLiteral("Go Back");
                 EndContext();

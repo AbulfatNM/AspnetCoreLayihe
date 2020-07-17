@@ -11,6 +11,8 @@ namespace Asp_Core_Layihe.ViewModels
         public IEnumerable <Teacher> Teacher { get; set; }
         public IEnumerable<Blog>  Blogs { get; set; }
         public IEnumerable<Event> Events { get; set; }
+        public IEnumerable<Course> Courses { get; set; }
+
 
 
     }

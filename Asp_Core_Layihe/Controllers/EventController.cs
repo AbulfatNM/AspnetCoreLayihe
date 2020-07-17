@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Asp_Core_Layihe.DAL;
 using Asp_Core_Layihe.Models;
 using Asp_Core_Layihe.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +26,7 @@ namespace Asp_Core_Layihe.Controllers
             List<Event> events = _db.Events.ToList();
             return View(events);
         }
+        [Authorize]
         public async Task <IActionResult> Detail(int? id)
         {
             if (id==null)
@@ -64,6 +66,23 @@ namespace Asp_Core_Layihe.Controllers
                 Events = events
             };
             return PartialView("_SearchPartial", searchVM);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [ActionName("Detail")]
+        public IActionResult EventReapley(EventVM massage)
+        {
+            if (!ModelState.IsValid) return View();
+            Reply reply = new Reply
+            {
+                Name = massage.Reply.Name,
+                Email = massage.Reply.Email,
+                Massage = massage.Reply.Massage,
+                Subject = massage.Reply.Subject
+            };
+            _db.Replies.Add(reply);
+            _db.SaveChanges();
+            return RedirectToAction(nameof(Detail));
         }
     }
   

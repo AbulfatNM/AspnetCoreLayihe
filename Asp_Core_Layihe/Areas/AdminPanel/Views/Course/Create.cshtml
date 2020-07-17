@@ -1,4 +1,4 @@
-﻿@model CourseContent
+﻿@model CourseVM
 @{
     ViewData["Title"] = "Create";
 }
@@ -7,30 +7,68 @@
     <div class="col-md-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Create Content</h4>
-                <form method="post" asp-action="Create" class="forms-sample mt-5">
+                <h4 class="card-title">Create Course </h4>
+                <form method="post" class="forms-sample mt-5" enctype="multipart/form-data">
                     <div class="form-group">
-                        <h5>About Course </h5>
-                        <input asp-for="AboutCourse" class="form-control" id="exampleInputUsername1" placeholder="Write About">
-                        @*<textarea id="editor" asp-for="CategoryName" placeholder="Write the category name"></textarea>*@
+                        <h5>Course Image </h5>
+                        <input asp-for="Course.CoursePhoto" class="form-control" id="exampleInputUsername1" placeholder="Write the category name" accept="image/*">
+                        <span class="text-danger" asp-validation-for="Course.CoursePhoto"></span>
                         <div class="text-danger" asp-validation-summary="ModelOnly"></div>
-                        <span class="text-danger" asp-validation-for="AboutCourse"></span>
-                        <h5 class="mt-3">HowToApply Course </h5>
-                        <input asp-for="HowToApply" class="form-control" id="exampleInputUsername1" placeholder="Write Howtoapply">
-                        <span class="text-danger" asp-validation-for="HowToApply"></span>
-                        <h5 class="mt-3">Certification Course </h5>
-                        <input asp-for="Certification" class="form-control" id="exampleInputUsername1" placeholder="Write Certification">
-                        <span class="text-danger" asp-validation-for="Certification"></span>
+                        <h5 class="mt-3">Course Title </h5>
+                        <input asp-for="Course.Title" class="form-control" id="exampleInputUsername1" placeholder="Write the Title">
+                        <span class="text-danger" asp-validation-for="Course.Title"></span>
+                        <h5 class="mt-3">Course Description </h5>
+                        <input asp-for="Course.Description" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                        <span class="text-danger" asp-validation-for="Course.Description"></span>
+                        <h5 class="mt-3">Course About </h5>
+                        <input asp-for="CourseContent.AboutCourse" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                        <span class="text-danger" asp-validation-for="CourseContent.AboutCourse"></span>
+                        <h5 class="mt-3">Course HowToApply </h5>
+                        <input asp-for="CourseContent.HowToApply" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                        <span class="text-danger" asp-validation-for="CourseContent.HowToApply"></span>
+                        <h5 class="mt-3">Course Certification </h5>
+                        <input asp-for="CourseContent.Certification" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                        <span class="text-danger" asp-validation-for="CourseContent.Certification"></span>
+                        <h5 class="mt-3">Course Certification </h5>
+                        <input asp-for="CourseContent.Certification" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                        <span class="text-danger" asp-validation-for="CourseContent.Certification"></span>
+                        <h5 class="mt-3">Course Starts </h5>
+                        <input asp-for="CourseFeature.Starts" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                        <span class="text-danger" asp-validation-for="CourseFeature.Starts"></span>
+                        <h5 class="mt-3">Course Duration </h5>
+                        <input asp-for="CourseFeature.Duration" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                        <span class="text-danger" asp-validation-for="CourseFeature.Duration"></span>
+                        <h5 class="mt-3">Course Class Duration </h5>
+                        <input asp-for="CourseFeature.Class_Duration" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                        <span class="text-danger" asp-validation-for="CourseFeature.Class_Duration"></span>
+                        <h5 class="mt-3">Course Skill Level </h5>
+                        <input asp-for="CourseFeature.Skill_Level" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                        <span class="text-danger" asp-validation-for="CourseFeature.Skill_Level"></span>
+                        <h5 class="mt-3">Course Language </h5>
+                        <input asp-for="CourseFeature.Language" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                        <span class="text-danger" asp-validation-for="CourseFeature.Language"></span>
+                        <h5 class="mt-3">Course Students </h5>
+                        <input asp-for="CourseFeature.Students" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                        <span class="text-danger" asp-validation-for="CourseFeature.Students"></span>
+                        <h5 class="mt-3">Course Assesments </h5>
+                        <input asp-for="CourseFeature.Assesments" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                        <span class="text-danger" asp-validation-for="CourseFeature.Assesments"></span>
+                        <h5 class="mt-3">Course Course Fee </h5>
+                        <input asp-for="CourseFeature.Course_Fee" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                        <span class="text-danger" asp-validation-for="CourseFeature.Course_Fee"></span>
+
+                        @*<textarea id="editor" asp-for="CategoryName" placeholder="Write the category name"></textarea>*@
                     </div>
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                 </form>
                 <div class="mt-3">
-                    <a class="btn btn-dark text-white" asp-controller="Course" asp-action="CourseContent">Go Back</a>
+                    <a class="btn btn-dark text-white" asp-controller="Course" asp-action="Index">Go Back</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 @section Scripts{
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>

@@ -22,7 +22,7 @@ namespace Asp_Core_Layihe.Models
         public int CourseContentId { get; set; }
         public virtual CourseContent CourseContent { get; set; }
         [NotMapped]
-        public IFormFile Photo { get; set; }
+        public IFormFile CoursePhoto { get; set; }
 
     }
 }

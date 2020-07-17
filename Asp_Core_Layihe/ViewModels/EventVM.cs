@@ -13,5 +13,6 @@ namespace Asp_Core_Layihe.ViewModels
         public IEnumerable <Blog> Blog { get; set; }
         public IEnumerable <Speaker> Speaker { get; set; }
         public IEnumerable <AppUser> AppUser { get; set; }
+        public Reply Reply { get; set; }
     }
 }

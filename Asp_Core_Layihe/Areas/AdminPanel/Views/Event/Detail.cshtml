@@ -1,0 +1,44 @@
+﻿@model EventCrudVM
+@{
+    ViewData["Title"] = "Detail";
+}
+
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <img style="width:450px; height:250px" src="~/img/event/@Model.Event.Image" />
+
+        </div>
+        <div class="text-center mt-3">
+            <h5>Event Title</h5>
+            <p>@Model.Event.Title</p>
+            <h5 class="mt-3">Event StartTime</h5>
+            <p>@Model.Event.StartTime.ToString("HH")</p>
+            <h5 class="mt-3">Event EndTime</h5>
+            <p>@Model.Event.EndTime.ToString("HH")</p>
+            <h5 class="mt-3">Event Venue</h5>
+            <p>@Model.Event.Venue </p>
+            <h5 class="mt-3">Event Description</h5>
+            <p>@Html.Raw(Model.Event.Description)</p>
+        </div>
+        <h5 style="margin: 20px 0px; text-align:center;">Speaker Image</h5>
+        @foreach (EventToSpeaker item in Model.EventToSpeakers)
+        {
+            <div class="row d-flex justify-content-center">
+                <img style="width:130px;" src="~/img/event/@item.Speaker.Image" />
+            </div>
+        }
+
+        <div class="text-center mt-3">
+            @*<h5 class="mt-3">Speaker FullName</h5>
+            <p class="mt-3">@Model.Speaker.FullName</p>
+            <h5 class="mt-3">Speaker Position</h5>
+            <p>@Model.Speaker.Position</p>*@
+        </div>
+        <div class="row mt-4">
+            <a class="btn btn-dark text-white" asp-controller="Event" asp-action="Index">Go Back</a>
+        </div>
+    </div>
+
+
+
+

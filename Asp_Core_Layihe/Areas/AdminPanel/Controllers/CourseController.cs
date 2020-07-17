@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Asp_Core_Layihe.Areas.AdminPanel.ViewModels;
 using Asp_Core_Layihe.DAL;
 using Asp_Core_Layihe.Helpers;
 using Asp_Core_Layihe.Models;
@@ -16,35 +17,16 @@ namespace Asp_Core_Layihe.Areas.AdminPanel.Controllers
     {
         private readonly AppDbContex _db;
         private readonly IHostingEnvironment _env;
-
         public CourseController(AppDbContex db, IHostingEnvironment env)
         {
             _db = db;
             _env = env;
         }
-        public IActionResult Index()
+        public async Task<IActionResult>  Index()
         {
-            return View();
-        }
-       public IActionResult CourseContent()
-        {
-            
+            ICollection<Course> courses = await _db.Courses.ToListAsync();
 
-            ICollection<CourseContent> courseContent = _db.CourseContents.ToList();
-
-
-            return View(courseContent);
-        }
-        public IActionResult Detail(int? id)
-        {
-            if (id == null) return NotFound();
-            CourseContent courseFind = _db.CourseContents.Find(id);
-            if (courseFind==null)
-            {
-                return NotFound();
-            }
-           
-            return View(courseFind);
+            return View(courses);
         }
         public IActionResult Create()
         {
@@ -52,217 +34,169 @@ namespace Asp_Core_Layihe.Areas.AdminPanel.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(CourseContent course)
+        public async Task<IActionResult> Create(CourseVM courseCreate)
         {
-            if (!ModelState.IsValid) return View();
-            if (course==null) return NotFound();
-            await _db.CourseContents.AddAsync(course);
+            Course course =await _db.Courses.FirstOrDefaultAsync();
+            CourseContent courseContent = await _db.CourseContents.FirstOrDefaultAsync();
+            CourseFeature courseFeature = await _db.CourseFeatures.FirstOrDefaultAsync();
+
+            if (courseCreate.Course.CoursePhoto == null)
+            {
+                ModelState.AddModelError("", "Zehmet olmasa şəkil seçin !");
+                return View();
+            }
+            if (!courseCreate.Course.CoursePhoto.IsImage())
+            {
+                ModelState.AddModelError("Photo", "Zehmet olmasa şəkil formati seçin !");
+                return View();
+            }
+            if (courseCreate.Course.CoursePhoto.MaxLenght(500))
+            {
+                ModelState.AddModelError("Photo", "Secilen şəkil olcusu maksimum 500kb olmalidi seçin !");
+                return View();
+            }
+            
+            CourseVM courseVM = new CourseVM()
+            {
+                Course = course,
+                CourseContent = courseContent,
+                CourseFeature = courseFeature
+            };
+       
+            CourseFeature feature = courseCreate.CourseFeature;
+            CourseContent content = courseCreate.CourseContent;
+            course = courseCreate.Course;
+            course.CourseFeature = feature;
+            course.CourseContent = content;
+            courseCreate.Course.Image = await courseCreate.Course.CoursePhoto.SaveImage(_env.WebRootPath, "img/course");
+            _db.Courses.Add(course);
             await _db.SaveChangesAsync();
-            TempData["ContentId"] = course.Id;
-            return RedirectToAction("CourseCreate", "Course");
+            return RedirectToAction(nameof(Index));
+        }
+        public async Task<IActionResult> Detail(int? id)
+        {
+            if (id == null) return NotFound();
+            Course course = await _db.Courses.FindAsync(id);
+            CourseContent courseContent = await _db.CourseContents.FirstOrDefaultAsync(c => c.Id == course.CourseContentId);
+            CourseFeature courseFeature = await _db.CourseFeatures.FirstOrDefaultAsync(c=>c.Id==course.CourseFeatureId);
+            CourseVM courseVM = new CourseVM()
+            {
+                Course = course,
+                CourseContent = courseContent,
+                CourseFeature = courseFeature
+            };
+           
+            if (courseVM == null) return NotFound();
+            return View(courseVM);
+        }
+
+
+
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null) return NotFound();
+            Course course = await _db.Courses.FindAsync(id);
+            CourseContent courseContent = await _db.CourseContents.FirstOrDefaultAsync(c => c.Id == course.CourseContentId);
+            CourseFeature courseFeature = await _db.CourseFeatures.FirstOrDefaultAsync(c => c.Id == course.CourseFeatureId);
+            CourseVM courseVM = new CourseVM()
+            {
+                Course = course,
+                CourseContent = courseContent,
+                CourseFeature = courseFeature
+            };
+            if (courseVM == null) return NotFound();
+            return View(courseVM);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int? id, CourseVM courseEdit)
+        {
+            Course course = await _db.Courses.FindAsync(id);
+            CourseContent courseContent = await _db.CourseContents.FirstOrDefaultAsync(c => c.Id == course.CourseContentId);
+            CourseFeature courseFeature = await _db.CourseFeatures.FirstOrDefaultAsync(c => c.Id == course.CourseFeatureId);
+            CourseVM courseVM = new CourseVM()
+            {
+                Course = course,
+                CourseContent = courseContent,
+                CourseFeature = courseFeature
+            };
+         
+            if (courseEdit == null) return NotFound();
+            if (id == null) return NotFound();
+      
+            if (courseEdit.Course.CoursePhoto != null)
+            {
+                if (!courseEdit.Course.CoursePhoto.IsImage())
+                {
+                    ModelState.AddModelError("Photo", "Zehmet olmasa şəkil formati seçin !");
+                    return View();
+                }
+                if (courseEdit.Course.CoursePhoto.MaxLenght(500))
+                {
+                    ModelState.AddModelError("Photo", "Secilen şəkil olcusu maksimum 500kb olmalidi seçin !");
+                    return View();
+                }
+                PhotoFileDelete.IsDeletePhoto(_env.WebRootPath, "img/course", courseVM.Course.Image);
+                courseVM.Course.Image = await courseEdit.Course.CoursePhoto.SaveImage(_env.WebRootPath, "img/course");
+            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return View();
+            //}
+            courseVM.Course.Title = courseEdit.Course.Title;
+            courseVM.Course.Description = courseEdit.Course.Description;
+            courseVM.CourseFeature.Starts = courseEdit.CourseFeature.Starts;
+            courseVM.CourseFeature.Duration = courseEdit.CourseFeature.Duration;
+            courseVM.CourseFeature.Class_Duration = courseEdit.CourseFeature.Class_Duration;
+            courseVM.CourseFeature.Skill_Level = courseEdit.CourseFeature.Skill_Level;
+            courseVM.CourseFeature.Language = courseEdit.CourseFeature.Language;
+            courseVM.CourseFeature.Students = courseEdit.CourseFeature.Students;
+            courseVM.CourseFeature.Assesments = courseEdit.CourseFeature.Assesments;
+            courseVM.CourseFeature.Course_Fee = courseEdit.CourseFeature.Course_Fee;
+            courseVM.CourseContent.AboutCourse = courseEdit.CourseContent.AboutCourse;
+            courseVM.CourseContent.HowToApply = courseEdit.CourseContent.HowToApply;
+            courseVM.CourseContent.Certification = courseEdit.CourseContent.Certification;
+            await _db.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return NotFound();
-            CourseContent courseContent = await _db.CourseContents.FindAsync(id);
-            if (courseContent == null) return NotFound();
+            Course course = await _db.Courses.FindAsync(id);
+            CourseContent courseContent = await _db.CourseContents.FirstOrDefaultAsync(c => c.Id == course.CourseContentId);
+            CourseFeature courseFeature = await _db.CourseFeatures.FirstOrDefaultAsync(c => c.Id == course.CourseFeatureId);
+            CourseVM courseVM = new CourseVM()
+            {
+                Course = course,
+                CourseContent = courseContent,
+                CourseFeature = courseFeature
+            };
 
-            return View(courseContent);
+            if (courseVM == null) return NotFound();
+            return View(courseVM);
         }
-        [HttpPost]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        [ActionName("Delete")]
         public async Task<IActionResult> DeletePost(int? id)
         {
             if (id == null) return NotFound();
-            CourseContent courseContent = await _db.CourseContents.FindAsync(id);
-            if (courseContent == null) return NotFound();
-            _db.CourseContents.Remove(courseContent);
+            Course course = await _db.Courses.FindAsync(id);
+            CourseContent courseContent = await _db.CourseContents.FirstOrDefaultAsync(c => c.Id == course.CourseContentId);
+            CourseFeature courseFeature = await _db.CourseFeatures.FirstOrDefaultAsync(c => c.Id == course.CourseFeatureId);
+            CourseVM courseVM = new CourseVM()
+            {
+                Course = course,
+                CourseContent = courseContent,
+                CourseFeature = courseFeature
+            };
+            if (courseVM == null) return NotFound();
+            PhotoFileDelete.IsDeletePhoto(_env.WebRootPath, "img/course", courseVM.Course.Image);
+            _db.CourseContents.Remove(courseVM.CourseContent);
+            _db.CourseFeatures.Remove(courseVM.CourseFeature);
+            _db.Courses.Remove(courseVM.Course);
             await _db.SaveChangesAsync();
-
-            return RedirectToAction("CourseContent", "Course");
-
-        }
-        public async Task<IActionResult> Edit(int? id)
-        {
-
-            if (id == null) return NotFound();
-            CourseContent courseContent = await _db.CourseContents.FindAsync(id);
-            if (courseContent == null) return NotFound();
-            return View(courseContent);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int? id, CourseContent courseContent)
-        {
-            if (!ModelState.IsValid) return View();
-            if (id == null) return NotFound();
-            if (courseContent.AboutCourse == null)
-            {
-                return NotFound();
-            }
-            bool IsValid = await _db.CourseContents.AnyAsync(c => c.AboutCourse.ToLower() == courseContent.AboutCourse.ToLower());
-            if (IsValid)
-            {
-                ModelState.AddModelError("", "Bu adli content movzuddur !");
-                return View();
-            }
-            CourseContent dbCourseContent = await _db.CourseContents.FindAsync(id);
-            dbCourseContent.AboutCourse = courseContent.AboutCourse;
-            dbCourseContent.HowToApply = courseContent.HowToApply;
-            dbCourseContent.Certification = courseContent.Certification;
-            await _db.SaveChangesAsync();
-            return RedirectToAction("CourseContent", "Course");
-
-        }
-        public IActionResult CourseFeature()
-        {
-
-            ICollection<CourseFeature> courseFeature = _db.CourseFeatures.ToList();
-
-            return View(courseFeature);
-        }
-        public async Task <IActionResult> DetailCourseFature(int? id, CourseFeature courseFeature)
-        {
-            if (id == null) return NotFound();
-               CourseFeature courseFind = await _db.CourseFeatures.FindAsync(id);
-            if (courseFind == null)
-            {
-                return NotFound();
-            }
-
-            return View(courseFind);
-        }
-        public IActionResult CreateCourseFature()
-        {
-            return View();
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreateCourseFature(CourseFeature course)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
-            if (!ModelState.IsValid) return View();
-            if (course == null) return NotFound();
-            await _db.CourseFeatures.AddAsync(course);
-            await _db.SaveChangesAsync();
-            TempData["FeatureId"] = course.Id;
-            return RedirectToAction("Create", "Course");
-        }
-        public async Task<IActionResult> DeleteCourseFature(int? id)
-        {
-            if (id == null) return NotFound();
-            CourseFeature courseFeature = await _db.CourseFeatures.FindAsync(id);
-            if (courseFeature == null) return NotFound();
-
-            return View(courseFeature);
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [ActionName("DeleteCourseFature")]
-        public async Task<IActionResult> DeletePostCourseFature(int? id)
-        {
-            if (id == null) return NotFound();
-            CourseFeature courseFeature = await _db.CourseFeatures.FindAsync(id);
-            if (courseFeature == null) return NotFound();
-            _db.CourseFeatures.Remove(courseFeature);
-            await _db.SaveChangesAsync();
-            
-            return RedirectToAction("CourseFeature", "Course");
-        }
-
-        public async Task<IActionResult> EditCourseFature(int? id)
-        {
-
-            if (id == null) return NotFound();
-            CourseFeature courseFeature  = await _db.CourseFeatures.FindAsync(id);
-            if (courseFeature == null) return NotFound();
-            return View(courseFeature);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditCourseFature(int? id, CourseFeature courseFeature)
-        {
-            if (!ModelState.IsValid) return View();
-            if (id == null) return NotFound();
-             CourseFeature dbCourseContent = await _db.CourseFeatures.FindAsync(id);
-            
-            if (courseFeature == null)
-            {
-                return NotFound();
-            }
-            dbCourseContent.Starts = courseFeature.Starts;
-            dbCourseContent.Skill_Level = courseFeature.Skill_Level;
-            dbCourseContent.Students = courseFeature.Students;
-            dbCourseContent.Duration = courseFeature.Duration;
-            dbCourseContent.Class_Duration = courseFeature.Class_Duration;
-            dbCourseContent.Assesments = courseFeature.Assesments;
-            dbCourseContent.Course_Fee = courseFeature.Course_Fee;
-            await _db.SaveChangesAsync();
-            return RedirectToAction("CourseFeature", "Course");
-        }
-
-        public IActionResult Course()
-        {
-
-
-            ICollection<Course> course = _db.Courses.ToList();
-
-
-            return View(course);
-        }
-
-        public IActionResult CourseCreate()
-        {
-                        
-            return View();
-
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CourseCreate(Course course)
-        {
-            //int HomeSliderCount = _db.HomeSliders.Count();
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
-            if (course.Photo == null)
-            {
-                ModelState.AddModelError("", "Zehmet olmasa şəkil seçin !");
-                return View();
-            }
-            if (!course.Photo.IsImage())
-            {
-                ModelState.AddModelError("Photo", "Zehmet olmasa şəkil formati seçin !");
-                return View();
-            }
-            if (course.Photo.MaxLenght(500))
-            {
-                ModelState.AddModelError("Photo", "Secilen şəkil olcusu maksimum 500kb olmalidi seçin !");
-                return View();
-            }
-            int FeauteId = (int)TempData["FeatureId"];
-            int CourseId = (int)TempData["ContentId"];
-
-            Course newCourse = _db.Courses.FirstOrDefault();
-            course.Image = await course.Photo.SaveImage(_env.WebRootPath, "img/course");
-            course.CourseFeatureId = FeauteId;
-            course.CourseContentId = CourseId;
-            newCourse.Image = course.Image;
-            newCourse.Title = course.Title;
-            newCourse.Description = course.Description;
-            newCourse.CourseContentId = course.CourseContentId;
-            newCourse.CourseFeatureId = course.CourseFeatureId;
-            await _db.Courses.AddRangeAsync(course);
-            await _db.SaveChangesAsync();
-            return RedirectToAction(nameof(Course));
+            return RedirectToAction(nameof(Index));
         }
     }
 }

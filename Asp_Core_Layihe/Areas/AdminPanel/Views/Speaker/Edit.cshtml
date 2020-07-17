@@ -1,0 +1,49 @@
+﻿@model Speaker
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="row d-flex justify-content-center">
+                    <img style="width:450px; height:250px" src="~/img/event/@Model.Image" />
+
+                </div>
+                <div class="text-center mt-3">
+                    <h2>@Model.FullName </h2>
+                    <p>@Model.Position </p>
+                </div>
+                <form method="post" class="forms-sample mt-5" enctype="multipart/form-data">
+                    <h4 class="card-title">Edit Speaker</h4>
+                    <div class="form-group">
+                        <h5>Speaker Image </h5>
+                        <input asp-for="PhotoSpeaker" class="form-control" id="exampleInputUsername1" placeholder="Write the category name" accept="image/*">
+                        <span class="text-danger" asp-validation-for="PhotoSpeaker"></span>
+                        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                        <h5 class="mt-3">Speaker FullName </h5>
+                        <input asp-for="FullName" class="form-control" id="exampleInputUsername1" placeholder="Write the Title">
+                        <span class="text-danger" asp-validation-for="FullName"></span>
+                        <h5 class="mt-3">Speaker Position </h5>
+                        <input asp-for="Position" class="form-control" id="exampleInputUsername1" placeholder="Write the Description">
+                        <span class="text-danger" asp-validation-for="Position"></span>
+                        @*<textarea id="editor" asp-for="CategoryName" placeholder="Write the category name"></textarea>*@
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                </form>
+                <div class="mt-3">
+                    <a class="btn btn-dark text-white" asp-controller="Speaker" asp-action="Index">Go Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+}
+
+

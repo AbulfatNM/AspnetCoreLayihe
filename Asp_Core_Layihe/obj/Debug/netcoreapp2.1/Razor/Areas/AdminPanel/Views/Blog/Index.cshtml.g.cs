@@ -81,7 +81,7 @@ using Asp_Core_Layihe.Areas.AdminPanel.ViewModels;
                         ");
             EndContext();
             BeginContext(361, 87, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c80c6db444b7466cb1c943d25acde479", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3e7f8fc07d6947f5aced154efca415e8", async() => {
                 BeginContext(430, 14, true);
                 WriteLiteral("Create Contact");
                 EndContext();
@@ -131,7 +131,7 @@ using Asp_Core_Layihe.Areas.AdminPanel.ViewModels;
             WriteLiteral("                                    <tr>\r\n                                        <td>\r\n                                            ");
             EndContext();
             BeginContext(1278, 70, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8690102a6e2f4a10ae388758f7338cb5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a5db04f689f742afb5390e45c013a4ab", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -157,7 +157,7 @@ AddHtmlAttributeValue("", 1333, blog.Image, 1333, 11, false);
             WriteLiteral("\r\n                                        </td>\r\n                                        <td>\r\n                                            ");
             EndContext();
             BeginContext(1487, 214, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c9e98cf98b20488980970bb538eb182b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d31c037abca4e8ab8fc60aa3dc136cc", async() => {
                 BeginContext(1558, 139, true);
                 WriteLiteral("\r\n                                                <i class=\"mdi mdi-information-variant\"></i>\r\n                                            ");
                 EndContext();
@@ -193,7 +193,7 @@ AddHtmlAttributeValue("", 1333, blog.Image, 1333, 11, false);
             WriteLiteral("\r\n                                            ");
             EndContext();
             BeginContext(1747, 205, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "845b913cc4a649719344938f0d0d8fdb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "53fab473e3874701bd3e27607cff4d65", async() => {
                 BeginContext(1816, 132, true);
                 WriteLiteral("\r\n                                                <i class=\"mdi mdi-border-color\"></i>\r\n                                            ");
                 EndContext();
@@ -229,7 +229,7 @@ AddHtmlAttributeValue("", 1333, blog.Image, 1333, 11, false);
             WriteLiteral("\r\n                                            ");
             EndContext();
             BeginContext(1998, 208, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7549b1be901e46e9aefe88a11efe9e43", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "896455d589ba4e8f8346c08739f56e06", async() => {
                 BeginContext(2068, 134, true);
                 WriteLiteral("\r\n                                                <i class=\"mdi mdi-delete-variant\"></i>\r\n                                            ");
                 EndContext();

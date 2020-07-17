@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Asp_Core_Layihe.Helpers;
 using Asp_Core_Layihe.Models;
 using Asp_Core_Layihe.ViewModels;
 using Microsoft.AspNetCore.Identity;
@@ -13,10 +14,12 @@ namespace Asp_Core_Layihe.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+        private readonly RoleManager<IdentityRole> _roleManager;
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager; 
         }
         public IActionResult Register()
         {
@@ -43,6 +46,7 @@ namespace Asp_Core_Layihe.Controllers
                 }
                 return View(register);
             }
+            await _userManager.AddToRoleAsync(newUser, Email.UserRols.Member.ToString());
             await _signInManager.SignInAsync(newUser, true);
 
             return RedirectToAction("Index", "Home");
@@ -74,7 +78,26 @@ namespace Asp_Core_Layihe.Controllers
                 ModelState.AddModelError("", "Daxil edilən email və ya parol səhvdir !!! ");
                 return View(login);
             }
+            if (logiUser.IsDelete == true)
+            {
+                ModelState.AddModelError("", "Sizin hesabiniz silinmişdir !!");
+                return View();
+            }
+
             return RedirectToAction("Index", "Home");
         }
+        public async Task CreateRole()
+        {
+            if (!await _roleManager.RoleExistsAsync(Email.UserRols.Admin.ToString()))
+            {
+                await _roleManager.CreateAsync(new IdentityRole(Email.UserRols.Admin.ToString()));
+            }
+            if (!await _roleManager.RoleExistsAsync(Email.UserRols.Member.ToString()))
+            {
+                await _roleManager.CreateAsync(new IdentityRole(Email.UserRols.Member.ToString()));
+            }
+           
+        }
     }
+ 
 }

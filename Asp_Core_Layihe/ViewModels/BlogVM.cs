@@ -13,5 +13,6 @@ namespace Asp_Core_Layihe.ViewModels
         public AppUser AppUser { get; set; }
         public IEnumerable <Category> Categories { get; set; }
         public IEnumerable<AppUser> AppUsers { get; set; }
+        public Reply Reply { get; set; }
     }
 }

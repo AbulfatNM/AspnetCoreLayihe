@@ -27,6 +27,15 @@
         </li>
     }
 }
+@if (Model.Courses != null)
+{
+    @foreach (Course course in Model.Courses)
+    {
+        <li style="list-style:none; text-align:center">
+            <a href="/teacher/details/@course.Id" style="color:red; ">@course.Title</a>
+        </li>
+    }
+}
 
 
 

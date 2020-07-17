@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Asp_Core_Layihe.Helpers
 {
-    public class Email
+    public static  class Email
     {
         public enum IsValidEmail
         {       
@@ -15,5 +15,10 @@ namespace Asp_Core_Layihe.Helpers
             Success
         }
 
+        public enum UserRols
+        {
+            Admin,
+            Member
+        }
     }
 }

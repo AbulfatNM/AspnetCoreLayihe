@@ -406,6 +406,28 @@ namespace Asp_Core_Layihe.Migrations
                     b.ToTable("HomeSliders");
                 });
 
+            modelBuilder.Entity("Asp_Core_Layihe.Models.Reply", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email")
+                        .IsRequired();
+
+                    b.Property<string>("Massage")
+                        .IsRequired();
+
+                    b.Property<string>("Name")
+                        .IsRequired();
+
+                    b.Property<string>("Subject");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Replies");
+                });
+
             modelBuilder.Entity("Asp_Core_Layihe.Models.SkillsTeacher", b =>
                 {
                     b.Property<int>("Id")
