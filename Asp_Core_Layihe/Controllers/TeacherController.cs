@@ -31,7 +31,7 @@ namespace Asp_Core_Layihe.Controllers
                 return View(teachers);
             
         }
-        [Authorize]
+        //[Authorize]
         public async Task <IActionResult> Details(int? id)
         {
 

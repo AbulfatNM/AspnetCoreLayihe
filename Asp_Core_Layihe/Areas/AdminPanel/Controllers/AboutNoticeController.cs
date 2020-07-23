@@ -4,12 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Asp_Core_Layihe.DAL;
 using Asp_Core_Layihe.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Asp_Core_Layihe.Areas.AdminPanel.Controllers
 {
     [Area("AdminPanel")]
+    //[Authorize(Roles ="Admin")]
     public class AboutNoticeController : Controller
     {
         private readonly AppDbContex _db;

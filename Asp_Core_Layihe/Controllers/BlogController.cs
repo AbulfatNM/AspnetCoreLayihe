@@ -52,7 +52,7 @@ namespace Asp_Core_Layihe.Controllers
                 return View(blogVM);
             }
         }
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult>   Detail(int? id)
         {
             if (id==null)

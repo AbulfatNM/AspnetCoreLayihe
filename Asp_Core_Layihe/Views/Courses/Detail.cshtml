@@ -116,6 +116,28 @@
                     </div>
                     <div class="single-blog-widget mb-50">
                         <h3>latest post</h3>
+                        @foreach (Blog blog in Model.Blog)
+                        {
+                            <div class="single-post mb-30">
+                                <div class="single-post-img">
+                                    <a asp-action="Detail" asp-controller="Blog" asp-route-id="@blog.Id">
+                                        <img style="width:100px;" src="~/img/blog/@blog.Image" alt="post">
+                                        <div class="blog-hover">
+                                            <i class="fa fa-link"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="single-post-content">
+                                    <h4><a asp-action="Detail" asp-controller="Blog" asp-route-id="@blog.Id">@blog.Title</a></h4>
+                                    <p>By @Model.AppUser.FirstOrDefault(u => u.Id == blog.AppUserId) /  @blog.Date.ToString("dd/MM /yyyy")</p>
+                                </div>
+                            </div>
+
+                        }
+
+                    </div>
+                    @*<div class="single-blog-widget mb-50">
+                        <h3>latest post</h3>
                         <div class="single-post mb-30">
                             <div class="single-post-img">
                                 <a href="blog-details.html">
@@ -158,7 +180,7 @@
                                 <p>By Alex  /  June 20, 2017</p>
                             </div>
                         </div>
-                    </div>
+                    </div>*@
                     <div class="single-blog-widget">
                         <h3>tags</h3>
                         <div class="single-tag">

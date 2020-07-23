@@ -81,7 +81,7 @@ using Asp_Core_Layihe.Areas.AdminPanel.ViewModels;
             WriteLiteral("</p>\r\n                ");
             EndContext();
             BeginContext(269, 156, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4e8922d99a9b462f9c628e4661a5819a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "334f86cdfef8408c908ed2ec66211dc9", async() => {
                 BeginContext(316, 102, true);
                 WriteLiteral("\r\n                    <button type=\"submit\" class=\"btn btn-danger  \">Delete</button>\r\n                ");
                 EndContext();
@@ -106,7 +106,7 @@ using Asp_Core_Layihe.Areas.AdminPanel.ViewModels;
             WriteLiteral("\r\n            </div>\r\n        </div>\r\n            <div class=\"row mt-2\">\r\n                ");
             EndContext();
             BeginContext(515, 91, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1c7a60ed2598455c886fff6695ae0c1f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0b1fe4ecebdd4bf2aeed14fa4dc20d42", async() => {
                 BeginContext(595, 7, true);
                 WriteLiteral("Go Back");
                 EndContext();

@@ -7,6 +7,7 @@ using Asp_Core_Layihe.DAL;
 using Asp_Core_Layihe.Models;
 using Asp_Core_Layihe.ViewModels;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Remotion.Linq.Clauses.ResultOperators;
@@ -16,16 +17,18 @@ namespace Asp_Core_Layihe.Controllers
     public class CoursesController : Controller
     {
         private readonly AppDbContex _db;
-        public CoursesController(AppDbContex db)
+        private readonly UserManager<AppUser> _userManager;
+        public CoursesController(AppDbContex db, UserManager<AppUser> userManager)
         {
             _db = db;
+            _userManager = userManager;
         }
         public IActionResult Index()
         {
            List <Course> course = _db.Courses.ToList();
             return View(course);
         }
-        [Authorize]
+        //[Authorize]
         public IActionResult Detail(int? id)
         {
 
@@ -40,9 +43,12 @@ namespace Asp_Core_Layihe.Controllers
             }
             CategoryVM categoryVM = new CategoryVM()
             {
-                Course = _db.Courses.Include(c=>c.CourseContent).Include(c=>c.CourseFeature).FirstOrDefault(c => c.Id == id),
-                Courses = _db.Courses.ToList()
-            };
+                Course = _db.Courses.Include(c => c.CourseContent).Include(c => c.CourseFeature).FirstOrDefault(c => c.Id == id),
+                Courses = _db.Courses.ToList(),
+                Blog = _db.Blogs.Take(3).ToList(),
+                AppUser=  _userManager.Users.ToList()
+
+        };
             if (categoryVM==null)
             {
                 return NotFound();

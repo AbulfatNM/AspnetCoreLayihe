@@ -73,7 +73,7 @@ using Asp_Core_Layihe.Areas.AdminPanel.ViewModels;
             WriteLiteral("\r\n<html>\r\n");
             EndContext();
             BeginContext(79, 209, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d69bb0986d8848c29841725d7d74bf1b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dd7b5cb847e2415bb251ab54dc57d474", async() => {
                 BeginContext(85, 196, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css\">\r\n    <title>Index</title>\r\n");
                 EndContext();
@@ -93,7 +93,7 @@ using Asp_Core_Layihe.Areas.AdminPanel.ViewModels;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(290, 2517, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "118e2db5c2774e9ca6d61bb051a47438", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bbbbdc7682ec4260aa7e506a588dd820", async() => {
                 BeginContext(296, 543, true);
                 WriteLiteral(@"
     <div class="" container"">
@@ -152,7 +152,7 @@ using Asp_Core_Layihe.Areas.AdminPanel.ViewModels;
                 WriteLiteral("</td>\r\n                                <td>\r\n                                    ");
                 EndContext();
                 BeginContext(1227, 991, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "087bce4c70fe484587984739e90fbaca", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e30e6373bb92467a8a702cbcca29529e", async() => {
                     BeginContext(1271, 67, true);
                     WriteLiteral("\r\n                                        <select name=\"rolname\">\r\n");
                     EndContext();
@@ -168,7 +168,7 @@ using Asp_Core_Layihe.Areas.AdminPanel.ViewModels;
                     WriteLiteral("                                                    ");
                     EndContext();
                     BeginContext(1669, 148, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3d31eb9f8d23487297b9f4563bb2b8b6", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "500b9a9d66154f1fa168fe5a085f43df", async() => {
                         BeginContext(1691, 58, true);
                         WriteLiteral("\r\n                                                        ");
                         EndContext();
@@ -256,7 +256,7 @@ WriteAttributeValue("", 2049, user.Email, 2049, 11, false);
                 WriteLiteral("                                        ");
                 EndContext();
                 BeginContext(2464, 90, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "50cc756e74254425a68e6d718b312b93", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "82900904863d4958a8f820b6f5bfd9bb", async() => {
                     BeginContext(2544, 6, true);
                     WriteLiteral("Remove");
                     EndContext();

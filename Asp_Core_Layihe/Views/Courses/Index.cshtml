@@ -50,7 +50,7 @@
                             </a>
                         </div>
                         <div class="course-content">
-                            <h3><a href="course-details.html">@course.Title</a></h3>
+                            <h3><a asp-action="Detail"asp-route-id="@course.Id" >@course.Title</a></h3>
                             <p>@course.Description</p>
                             <a class="default-btn" asp-action="Detail"asp-route-id="@course.Id">read more</a>
                         </div>

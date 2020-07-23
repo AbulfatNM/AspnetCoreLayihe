@@ -26,7 +26,7 @@ namespace Asp_Core_Layihe.Controllers
             List<Event> events = _db.Events.ToList();
             return View(events);
         }
-        [Authorize]
+        //[Authorize]
         public async Task <IActionResult> Detail(int? id)
         {
             if (id==null)

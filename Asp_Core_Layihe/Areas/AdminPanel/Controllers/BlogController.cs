@@ -8,6 +8,7 @@ using Asp_Core_Layihe.DAL;
 using Asp_Core_Layihe.Helpers;
 using Asp_Core_Layihe.Models;
 using Asp_Core_Layihe.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -16,6 +17,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Asp_Core_Layihe.Areas.AdminPanel.Controllers
 {
     [Area("AdminPanel")]
+    //[Authorize(Roles ="Admin")]
     public class BlogController : Controller
     {
         private readonly AppDbContex _db;

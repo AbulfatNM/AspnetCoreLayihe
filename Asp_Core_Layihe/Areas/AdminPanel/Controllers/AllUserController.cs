@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Asp_Core_Layihe.Areas.AdminPanel.ViewModels;
 using Asp_Core_Layihe.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Asp_Core_Layihe.Areas.AdminPanel.Controllers
 {
     [Area("AdminPanel")]
+    //[Authorize(Roles ="Admin")]
     public class AllUserController : Controller
     {
         private readonly UserManager<AppUser> _userManager;

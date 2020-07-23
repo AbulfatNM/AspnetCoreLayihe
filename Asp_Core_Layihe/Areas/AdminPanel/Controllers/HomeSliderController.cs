@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Asp_Core_Layihe.DAL;
 using Asp_Core_Layihe.Helpers;
 using Asp_Core_Layihe.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +15,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 namespace Asp_Core_Layihe.Areas.AdminPanel.Controllers
 {
     [Area("AdminPanel")]
+    //[Authorize(Roles ="Admin")]
     public class HomeSliderController : Controller
     {
         private readonly AppDbContex _db;
